@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GridData } from './grid-data';
 
 @Component({
   selector: 'home',
@@ -16,6 +17,10 @@ export class HomeComponent {
 
   navigate() {
     this.router.navigate(['../', 'login'], { relativeTo: this.actRoute });
+  }
+
+  getStaticData() {
+    return GridData.getData();
   }
 
 }

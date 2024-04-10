@@ -1,3 +1,17 @@
 .bg {
   background-color: darkred;
 }
+
+mat-grid-tile.mat-grid-tile.ng-star-inserted {
+  background-color: white;
+}
+
+o-column {
+  >div {
+    >div {
+      >div {
+        align-items: center;
+      }
+    }
+  }
+}
