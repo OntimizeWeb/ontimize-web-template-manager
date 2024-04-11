@@ -1,15 +1,20 @@
 <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-  <o-grid #grid columns="id;img;description" keys="id" [static-data]="getStaticData()" show-page-size="yes"
-    page-size-options="24;32;64" grid-item-height="400px" fxFlex="calc(100% - 42px)" gutter-size="10px">
-    <o-grid-item *ngFor="let list of grid.dataArray">
-      <o-column layout-padding class="container-item" layout-align="center">
-        <img [src]="list.img" style="margin:8px; width: 90%; height: 90%;">
-        <h4> {{list.description}} </h4>
-        <o-row>
-          <o-button attr="view-btn" label="View"></o-button>
-          <o-button attr="download-btn" label="Download"></o-button>
-        </o-row>
-      </o-column>
-    </o-grid-item>
-  </o-grid>
+  <o-form #types editable-detail="no" show-header="no">
+    <o-column>
+      <o-checkbox *ngFor="let chk of getCheckboxes()" attr="{{chk.attr}}" label="{{chk.label}}" read-only="no" [data]="chk.attr"></o-checkbox>
+    </o-column>
+    <o-grid #grid columns="id;img;description" keys="id" [static-data]="getStaticData(types.getDataValues())" show-page-size="yes" page-size-options="24;32;64"
+      grid-item-height="400px" fxFlex="calc(100% - 42px)" gutter-size="10px">
+      <o-grid-item *ngFor="let grd of grid.dataArray">
+        <o-column layout-padding class="container-item" layout-align="center">
+          <img [src]="grd.img" style="margin:8px; width: 90%; height: 90%;">
+          <h4> {{grd.description}} </h4>
+          <o-row>
+            <o-button attr="view-btn" label="View"></o-button>
+            <o-button attr="download-btn" label="Download"></o-button>
+          </o-row>
+        </o-column>
+      </o-grid-item>
+    </o-grid>
+  </o-form>
 </div>
