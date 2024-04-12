@@ -1,9 +1,12 @@
-<div fxLayout="row" layout-padding fxLayoutAlign="center center">
-  <o-form #types editable-detail="no" show-header="no">
+<o-form editable-detail="no" show-header="no">
+  <div fxLayout="row" layout-padding fxLayoutAlign="center center">
     <o-column>
-      <o-checkbox *ngFor="let chk of getCheckboxes()" attr="{{chk.attr}}" label="{{chk.label}}" read-only="no" [data]="chk.attr"></o-checkbox>
+      <o-checkbox #checkbox *ngFor="let chk of getCheckboxes()" attr="{{chk.attr}}" label="{{chk.label}}" read-only="no" [data]="chk.attr"
+        [oFilterBuilderQuery]="filterBuilder"></o-checkbox>
     </o-column>
-    <o-grid #grid columns="id;img;description" keys="id" [static-data]="getStaticData(types.getDataValues())" show-page-size="yes" page-size-options="24;32;64"
+    <o-filter-builder #filterBuilder attr="thefilter" filters="ATTR" [target]="grid" query-on-change="no" query-on-change-delay="500"
+      [expression-builder]="createFilter"></o-filter-builder>
+    <o-grid #grid columns="ID;IMG;DESCRIPTION" keys="ID" service="templates" entity="template" show-page-size="yes" page-size-options="24;32;64"
       grid-item-height="400px" fxFlex="calc(100% - 42px)" gutter-size="10px">
       <o-grid-item *ngFor="let grd of grid.dataArray">
         <o-column layout-padding class="container-item" layout-align="center">
@@ -16,5 +19,5 @@
         </o-column>
       </o-grid-item>
     </o-grid>
-  </o-form>
-</div>
+  </div>
+</o-form>

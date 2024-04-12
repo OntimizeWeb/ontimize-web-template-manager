@@ -1,5 +1,8 @@
 export const SERVICE_CONFIG: Object = {
-  'customers': {
-    'path': '/customers'
+  'templates': {
+    'path': '/templates'
+  },
+  'checkboxes': {
+    'path': '/checkboxes'
   }
 };

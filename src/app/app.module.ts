@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CONFIG } from './app.config';
+import { DummyService } from './shared/services/dummy.service';
 
 // Standard providers...
 // Defining custom providers (if needed)...
@@ -31,6 +32,7 @@ export const customProviders: any = [
   providers: [
     { provide: APP_CONFIG, useValue: CONFIG },
     ONTIMIZE_PROVIDERS,
+    { provide: 'DummyService', useValue: DummyService },
     ...customProviders
   ]
 })

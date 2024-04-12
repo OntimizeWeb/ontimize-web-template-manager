@@ -1,0 +1,28 @@
+{
+  "code": 0,
+  "message": "",
+  "totalQueryRecordsNumber": 69,
+  "startRecordIndex": 0,
+  "data": [
+    {
+    "ATTR": 1,
+    "LABEL": "Tables"
+    },
+    {
+    "ATTR": 2,
+    "LABEL": "Grids"
+    },
+    {
+    "ATTR": 3,
+    "LABEL": "Lists"
+    },
+    {
+    "ATTR": 4,
+    "LABEL": "Trees"
+    }
+  ],
+  "sqlTypes": {
+    "ATTR": 5,
+    "LABEL": 12
+  }
+}

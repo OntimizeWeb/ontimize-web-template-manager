@@ -1,0 +1,32 @@
+{
+  "code": 0,
+  "message": "",
+  "totalQueryRecordsNumber": 69,
+  "startRecordIndex": 0,
+  "data": [
+    {
+      "ID": 1,
+      "IMG": "../../assets/images/template-images/template1.png",
+      "DESCRIPTION": "Simple login page.",
+      "TYPE": 5
+    },
+    {
+      "ID": 2,
+      "IMG": "../../assets/images/template-images/template2.png",
+      "DESCRIPTION": "Simple grid example.",
+      "TYPE": 2
+    },
+    {
+      "ID": 2,
+      "IMG": "../../assets/images/template-images/template1.png",
+      "DESCRIPTION": "Fixed grid example.",
+      "TYPE": 2
+    }
+  ],
+  "sqlTypes": {
+    "ID": 5,
+    "IMG": 12,
+    "DESCRIPTION": 12,
+    "TYPE": 5
+  }
+}
