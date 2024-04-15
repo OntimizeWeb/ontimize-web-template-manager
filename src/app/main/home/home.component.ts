@@ -1,7 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Injector, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CheckboxData } from './checkbox-data';
 import { Expression, FilterExpressionUtils, OCheckboxComponent, OFormComponent } from 'ontimize-web-ngx';
+import { DummyService } from '../../shared/services/dummy.service';
 
 @Component({
   selector: 'home',
@@ -12,10 +13,23 @@ export class HomeComponent {
 
   @ViewChild('checkbox', { static: false }) private checkbox: OCheckboxComponent;
 
+  service: DummyService;
+
   constructor(
     private router: Router,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    protected injector: Injector
   ) {
+    this.service = this.injector.get(DummyService);
+  }
+
+  ngOnInit(): void {
+    this.configureService();
+  }
+
+  protected configureService() {
+    const conf = this.service.getDefaultServiceConfiguration('templates');
+    this.service.configureService(conf);
   }
 
   getCheckboxes() {
@@ -27,7 +41,7 @@ export class HomeComponent {
     let filters: Array<Expression> = [];
     values.forEach(fil => {
       if (fil.value) {
-        if (fil.attr == '1' || fil.attr == '2' || fil.attr == '3' || fil.attr == '4') {
+        if (fil.attr == 1 || fil.attr == 2 || fil.attr == 3 || fil.attr == 4) {
           filters.push(FilterExpressionUtils.buildExpressionLike(fil.attr, fil.value));
         }
       }
@@ -39,6 +53,10 @@ export class HomeComponent {
     } else {
       return null;
     }
+  }
+
+  query() {
+    this.service.filteredQuery();
   }
 
 }
