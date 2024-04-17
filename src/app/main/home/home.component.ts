@@ -1,8 +1,9 @@
-import { Component, Injector, ViewChild } from '@angular/core';
+import { Component, Injector, QueryList, ViewChildren } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CheckboxData } from './checkbox-data';
 import { Expression, FilterExpressionUtils, OCheckboxComponent, OFormComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
+import { ArrayType } from '@angular/compiler';
 
 @Component({
   selector: 'home',
@@ -11,7 +12,7 @@ import { DummyService } from '../../shared/services/dummy.service';
 })
 export class HomeComponent {
 
-  @ViewChild('checkbox', { static: false }) private checkbox: OCheckboxComponent;
+  @ViewChildren('checkbox') private checkboxes: QueryList<OCheckboxComponent>;
 
   service: DummyService;
 
@@ -55,8 +56,16 @@ export class HomeComponent {
     }
   }
 
+  getCheckboxesValues() {
+    let values: Array<{ attr, value }> = [];
+    this.checkboxes.forEach((c) => {
+      values.push({ attr: c.getAttribute(), value: c.getValue() });
+    });
+    return values;
+  }
+
   query() {
-    this.service.filteredQuery();
+    this.service.query(this.createFilter(this.getCheckboxesValues()));
   }
 
 }
