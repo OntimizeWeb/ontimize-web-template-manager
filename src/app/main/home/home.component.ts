@@ -65,7 +65,11 @@ export class HomeComponent {
   }
 
   query() {
-    this.service.query(this.createFilter(this.getCheckboxesValues()));
+    const filter = {
+      "TYPE": 2
+    };
+    const columns = ['ID'];
+    this.service.query(filter, columns, 'templates');
   }
 
 }

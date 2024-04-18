@@ -9,7 +9,7 @@ export class DummyService extends OntimizeEEService {
   entity: string;
 
   static mappings: object = {
-    templates: '/templates-data.json',
+    template: '/templates-data.json',
     checkboxes: '/checkboxes-data.json'
   };
 

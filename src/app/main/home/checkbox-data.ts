@@ -1,19 +1,19 @@
 const data = [
   {
-    'attr': '1',
-    'label': 'Tables'
+    'ATTR': '1',
+    'LABEL': 'Tables'
   },
   {
-    'attr': '2',
-    'label': 'Grids'
+    'ATTR': '2',
+    'LABEL': 'Grids'
   },
   {
-    'attr': '3',
-    'label': 'Lists'
+    'ATTR': '3',
+    'LABEL': 'Lists'
   },
   {
-    'attr': '4',
-    'label': 'Trees'
+    'ATTR': '4',
+    'LABEL': 'Trees'
   }
 ]
 
