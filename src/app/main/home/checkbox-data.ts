@@ -1,18 +1,18 @@
 const data = [
   {
-    'ATTR': '1',
+    'ATTR': 'CHK_TABLES',
     'LABEL': 'Tables'
   },
   {
-    'ATTR': '2',
+    'ATTR': 'CHK_GRIDS',
     'LABEL': 'Grids'
   },
   {
-    'ATTR': '3',
+    'ATTR': 'CHK_LISTS',
     'LABEL': 'Lists'
   },
   {
-    'ATTR': '4',
+    'ATTR': 'CHK_TREES',
     'LABEL': 'Trees'
   }
 ]

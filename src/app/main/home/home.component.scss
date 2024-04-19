@@ -1,17 +1,41 @@
-.bg {
-  background-color: darkred;
-}
+.mat-sidenav-container-account-home {
+  background-color: transparent;
+  position: absolute;
+  height: calc(100% - 30px);
+  width: calc(100% - 16px);
+  padding: 8px;
 
-mat-grid-tile.mat-grid-tile.ng-star-inserted {
-  background-color: white;
-}
 
-o-column {
-  >div {
-    >div {
-      >div {
-        align-items: center;
+  .mat-sidenav-filters {
+    top: 74px;
+    bottom: 8px;
+    box-shadow: 0 3px 6px #00000029;
+
+    .filters {
+
+      height: 100%;
+      border-style: solid;
+      border-width: 4px;
+      border-top: 0;
+      border-bottom: 0;
+      border-right: 0;
+      border-color: #1464a5;
+      padding: 24px;
+
+      overflow: auto;
+
+      .label-balance {
+        font-size: 14px;
       }
     }
+  }
+
+  .mat-drawer-content {
+    overflow: hidden;
+  }
+
+  .mat-sidenav-content {
+    flex-direction: column;
+    max-height: 100%;
   }
 }
