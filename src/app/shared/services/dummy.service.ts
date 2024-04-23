@@ -123,14 +123,9 @@ export class DummyService extends OntimizeEEService {
       return this.fetchRoots(resp);
     }
 
-    const keys = Object.keys(kv || {});
     const result = [];
     resp.data.forEach(element => {
-      let add = true;
-      keys.forEach(key => {
-        add = add && (element[key] === kv[key]);
-      });
-      if (add) {
+      if (element["TYPE"] == kv["@basic_expression"].rop) {
         result.push(element);
       }
     });

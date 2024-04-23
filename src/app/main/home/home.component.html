@@ -2,9 +2,8 @@
   <mat-sidenav-container class="mat-sidenav-container-account-home">
     <mat-sidenav #sidenav opened class="mat-sidenav-filters">
       <div fxLayout="column" fxLayoutGap="18px" class="filters">
-        <mat-radio-group fxLayoutGap="8px" [oFilterBuilderQuery]="filterBuilder">
-          <o-checkbox *ngFor="let chk of getCheckboxes()" attr="{{chk.ATTR}}" label="{{chk.LABEL}}" read-only="no"></o-checkbox>
-        </mat-radio-group>
+        <o-checkbox *ngFor="let chk of getCheckboxes()" attr="{{chk.ATTR}}" label="{{chk.LABEL}}" read-only="no"
+          [oFilterBuilderQuery]="filterBuilder"></o-checkbox>
         <o-filter-builder #filterBuilder attr="thefilter" filters="CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES" [target]="grid" query-on-change="no" query-on-change-delay="500"
           [expression-builder]="createFilter"></o-filter-builder>
       </div>
@@ -12,7 +11,7 @@
     <mat-sidenav-content class="mat-sidenav-content">
       <o-button (click)="toogleSidenav()" icon="filter_list" type="STROKED" label="Filter"></o-button>
       <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-        <o-grid #grid columns="ID;IMG;DESCRIPTION;TYPE;" keys="ID" service="templates" entity="template" show-page-size="yes" page-size-options="24;32;64"
+        <o-grid #grid columns="ID;IMG;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-page-size="yes" page-size-options="24;32;64"
           grid-item-height="400px" fxFlex="calc(100% - 42px)" gutter-size="10px" service-type="DummyService">
           <o-grid-item *ngFor="let grd of grid.dataArray">
             <o-column layout-padding class="container-item" layout-align="center">

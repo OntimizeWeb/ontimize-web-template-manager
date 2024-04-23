@@ -40,17 +40,26 @@ export class HomeComponent {
     let filters = [];
     values.forEach(fil => {
       if (fil.value) {
-        if (fil.attr == "CHK_TABLES" || fil.attr == "CHK_GRIDS" || fil.attr == "CHK_LISTS" || fil.attr == "CHK_TREES") {
-          filters.push(FilterExpressionUtils.buildExpressionEquals(fil.attr, fil.value));
+        if (fil.attr == "CHK_TABLES") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 1));
+        }
+        else if (fil.attr == "CHK_GRIDS") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 2));
+        }
+        else if (fil.attr == "CHK_LISTS") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 3));
+        }
+        else if (fil.attr == "CHK_TREES") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 4));
         }
       }
     });
-    let ce: Expression;
-    if (filters.length > 0) {
-      ce = filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_AND), null);
-    }
 
-    return ce;
+    if (filters.length > 0) {
+      return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
+    } else {
+      return null;
+    }
   }
 
   toogleSidenav() {
