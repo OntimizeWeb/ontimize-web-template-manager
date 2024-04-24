@@ -118,14 +118,47 @@ export class DummyService extends OntimizeEEService {
     }
   }
 
+  private reduceFilter(kv: object, filter) {
+    let kv2;
+    if (kv.hasOwnProperty("@basic_expression")) {
+      kv2 = (({ lop, rop }) => ({ lop, rop }))(kv["@basic_expression"]);
+      if (kv2.lop != "TYPE") {
+        this.reduceFilter(kv2, filter);
+      } else if (typeof kv2.rop != "number") {
+        this.reduceFilter(kv2, filter);
+      } else {
+        filter.push(kv2.rop);
+      }
+    }
+    if (kv.hasOwnProperty("lop")) {
+      kv2 = kv["lop"];
+      if (kv2.lop != "TYPE") {
+        this.reduceFilter(kv2, filter);
+      } else {
+        filter.push(kv2.rop);
+      }
+    }
+    if (kv.hasOwnProperty("rop")) {
+      kv2 = kv["rop"];
+      if (typeof kv2.rop != "number") {
+        this.reduceFilter(kv2, filter);
+      } else {
+        filter.push(kv2.rop);
+      }
+    }
+  }
+
   private filterResponse(kv: object, resp) {
     if (kv.hasOwnProperty(FilterExpressionUtils.FILTER_EXPRESSION_KEY)) {
       return this.fetchRoots(resp);
     }
+    let filters = [];
+
+    this.reduceFilter(kv, filters);
 
     const result = [];
     resp.data.forEach(element => {
-      if (element["TYPE"] == kv["@basic_expression"].rop) {
+      if (filters.includes(element.TYPE)) {
         result.push(element);
       }
     });
