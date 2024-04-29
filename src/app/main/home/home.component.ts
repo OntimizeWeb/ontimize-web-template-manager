@@ -1,9 +1,9 @@
-import { Component, Injector, QueryList, ViewChildren } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Injector, ViewChild } from '@angular/core';
 import { CheckboxData } from './checkbox-data';
-import { Expression, FilterExpressionUtils, OCheckboxComponent, OFormComponent } from 'ontimize-web-ngx';
+import { Expression, FilterExpressionUtils } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
-import { ArrayType } from '@angular/compiler';
+import { MatSidenav } from '@angular/material/sidenav';
+import { MatRadioGroup } from '@angular/material/radio';
 
 @Component({
   selector: 'home',
@@ -12,13 +12,11 @@ import { ArrayType } from '@angular/compiler';
 })
 export class HomeComponent {
 
-  @ViewChildren('checkbox') private checkboxes: QueryList<OCheckboxComponent>;
+  @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
 
   service: DummyService;
 
   constructor(
-    private router: Router,
-    private actRoute: ActivatedRoute,
     protected injector: Injector
   ) {
     this.service = this.injector.get(DummyService);
@@ -39,33 +37,33 @@ export class HomeComponent {
 
   createFilter(values: Array<{ attr, value }>): Expression {
     // Prepare simple expressions from the filter components values
-    let filters: Array<Expression> = [];
+    let filters = [];
     values.forEach(fil => {
       if (fil.value) {
-        if (fil.attr == 1 || fil.attr == 2 || fil.attr == 3 || fil.attr == 4) {
-          filters.push(FilterExpressionUtils.buildExpressionLike(fil.attr, fil.value));
+        if (fil.attr == "CHK_TABLES") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 1));
+        }
+        else if (fil.attr == "CHK_GRIDS") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 2));
+        }
+        else if (fil.attr == "CHK_LISTS") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 3));
+        }
+        else if (fil.attr == "CHK_TREES") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 4));
         }
       }
     });
 
-    // Build complex expression
     if (filters.length > 0) {
-      return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_AND));
+      return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
     } else {
       return null;
     }
   }
 
-  getCheckboxesValues() {
-    let values: Array<{ attr, value }> = [];
-    this.checkboxes.forEach((c) => {
-      values.push({ attr: c.getAttribute(), value: c.getValue() });
-    });
-    return values;
-  }
-
-  query() {
-    this.service.query(this.createFilter(this.getCheckboxesValues()));
+  toogleSidenav() {
+    this.sidenav.toggle()
   }
 
 }
