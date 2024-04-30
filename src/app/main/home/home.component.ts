@@ -3,7 +3,7 @@ import { CheckboxData } from './checkbox-data';
 import { Expression, FilterExpressionUtils } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
-import { MatRadioGroup } from '@angular/material/radio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -17,7 +17,8 @@ export class HomeComponent {
   service: DummyService;
 
   constructor(
-    protected injector: Injector
+    protected injector: Injector,
+    protected router: Router
   ) {
     this.service = this.injector.get(DummyService);
   }
@@ -66,4 +67,7 @@ export class HomeComponent {
     this.sidenav.toggle()
   }
 
+  openDetail(templateId) {
+    this.router.navigate(['main/detail/', templateId]);
+  }
 }

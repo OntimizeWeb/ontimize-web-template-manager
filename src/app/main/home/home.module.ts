@@ -5,6 +5,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { DummyService } from '../../shared/services/dummy.service';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { DummyService } from '../../shared/services/dummy.service';
     HomeRoutingModule
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,
+    DetailComponent
   ],
   providers: [DummyService]
 })
