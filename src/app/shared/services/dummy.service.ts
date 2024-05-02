@@ -146,6 +146,9 @@ export class DummyService extends OntimizeEEService {
         filter.push(kv2.rop);
       }
     }
+    if (kv.hasOwnProperty("ID")) {
+      filter.push(kv["ID"]);
+    }
   }
 
   private filterResponse(kv: object, resp) {
@@ -159,6 +162,8 @@ export class DummyService extends OntimizeEEService {
     const result = [];
     resp.data.forEach(element => {
       if (filters.includes(element.TYPE)) {
+        result.push(element);
+      } else if (filters.includes(element.ID)) {
         result.push(element);
       }
     });

@@ -1,1 +1,14 @@
-<p>{{templateId}}</p>
+<div class="top-bar">
+  <img src="../../../../assets/images/ontimize_web_log.png" alt="Ontimize logo">
+</div>
+<div class="main-container">
+  <div class="left-container">
+    <o-button attr="back-btn" label="&#8592; Go back" (click)="openHome()" color="accent"></o-button>
+    <h1>{{ templateTitle }}</h1>
+    <o-button attr="back-btn" label="Download"></o-button>
+  </div>
+  <div class="right-container">
+    <div class="img-container"><img src="{{ templateImg }}" alt="Template image"></div>
+    <p>{{ templateDescription }}</p>
+  </div>
+</div>

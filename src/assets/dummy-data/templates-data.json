@@ -7,19 +7,22 @@
     {
       "ID": 1,
       "IMG": "../../assets/images/template-images/template1.png",
-      "DESCRIPTION": "Simple login page.",
+      "TITLE": "Simple login page",
+      "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 1
     },
     {
       "ID": 2,
       "IMG": "../../assets/images/template-images/template2.png",
-      "DESCRIPTION": "Simple grid example.",
+      "TITLE": "Simple grid example",
+      "DESCRIPTION": "This is the template of a grid for your Ontimize applications.",
       "TYPE": 2
     },
     {
       "ID": 3,
       "IMG": "../../assets/images/template-images/template1.png",
-      "DESCRIPTION": "Fixed grid example.",
+      "TITLE": "Fixed grid example",
+      "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 2
     }
   ],
