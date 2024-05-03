@@ -19,6 +19,7 @@ export class DetailComponent implements OnInit {
     protected router: Router
   ) {
     this.templateId = window.location.href.split('/')[5];
+    this.templateId = this.templateId.split('?')[0];
     this.service = this.injector.get(DummyService);
   }
 
@@ -47,6 +48,6 @@ export class DetailComponent implements OnInit {
   }
 
   openHome() {
-    this.router.navigate(['main/home']);
+    this.router.navigate(['main/templates']);
   }
 }

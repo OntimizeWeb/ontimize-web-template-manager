@@ -1,12 +1,13 @@
-.mat-sidenav-container {
+.main-container {
   background-color: transparent;
   position: absolute;
   height: calc(100% - 30px);
   width: calc(100% - 16px);
   padding: 8px;
+  display: flex;
+  flex-direction: row;
 
-
-  .mat-sidenav-filters {
+  .filters-container {
     top: 74px;
     bottom: 8px;
     box-shadow: 0 3px 6px #00000029;
@@ -26,12 +27,18 @@
     }
   }
 
-  .mat-drawer-content {
-    overflow: hidden;
-  }
-
-  .mat-sidenav-content {
+  .content-container {
     flex-direction: column;
     max-height: 100%;
+    width: 100%;
+    padding: 30px;
+
+    .mat-grid-tile-content {
+      background-color: white;
+
+      img {
+        align-self: center;
+      }
+    }
   }
 }
