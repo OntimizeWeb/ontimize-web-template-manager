@@ -1,1 +1,13 @@
-/* You can add main module styles to this file */
+.top-bar {
+  background-color: gray;
+  vertical-align: middle;
+}
+
+.main-container {
+  background-color: transparent;
+  position: absolute;
+  height: calc(100% - 30px);
+  width: calc(100% - 16px);
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
