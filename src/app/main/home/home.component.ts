@@ -1,6 +1,6 @@
-import { Component, Injector, ViewChild } from '@angular/core';
+import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CheckboxData } from './checkbox-data';
-import { Expression, FilterExpressionUtils } from 'ontimize-web-ngx';
+import { Expression, FilterExpressionUtils, OCheckboxComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
+  @ViewChild('enableChk', { static: true }) private checkbox: OCheckboxComponent;
 
   service: DummyService;
 
@@ -25,6 +26,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.configureService();
+    this.checkbox.setValue(true);
   }
 
   protected configureService() {
