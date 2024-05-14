@@ -1,29 +1,31 @@
-<o-form editable-detail="no" show-header="no" query-on-init="no">
-  <mat-sidenav-container class="mat-sidenav-container-account-home">
-    <mat-sidenav #sidenav opened class="mat-sidenav-filters">
-      <div fxLayout="column" fxLayoutGap="18px" class="filters">
-        <o-checkbox *ngFor="let chk of getCheckboxes()" attr="{{chk.ATTR}}" label="{{chk.LABEL}}" read-only="no"></o-checkbox>
-        <o-filter-builder #filterBuilder attr="thefilter" filters="CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES" [target]="grid" query-on-change="yes" query-on-change-delay="500"
-          [expression-builder]="createFilter"></o-filter-builder>
-      </div>
-    </mat-sidenav>
-    <mat-sidenav-content class="mat-sidenav-content">
-      <o-button (click)="toogleSidenav()" icon="filter_list" type="STROKED" label="Filter"></o-button>
-      <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-        <o-grid #grid columns="ID;IMG;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-page-size="yes" page-size-options="24;32;64"
-          grid-item-height="400px" fxFlex="calc(100% - 42px)" gutter-size="10px" service-type="DummyService">
-          <o-grid-item *ngFor="let grd of grid.dataArray">
-            <o-column layout-padding class="container-item" layout-align="center">
-              <img [src]="grd.IMG" style="margin:8px; width: 90%; height: 90%;">
-              <h4> {{grd.DESCRIPTION}} </h4>
-              <o-row>
-                <o-button attr="view-btn" label="View"></o-button>
-                <o-button attr="download-btn" label="Download"></o-button>
-              </o-row>
-            </o-column>
-          </o-grid-item>
-        </o-grid>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<o-form editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
+
+  <div class="filters-container">
+    <div fxLayout="column" fxLayoutGap="18px" class="filters">
+      <o-checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
+      <o-checkbox #enableChk attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
+      <o-checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
+      <o-checkbox attr="CHK_TREES" label="Trees" read-only="no"></o-checkbox>
+      <o-filter-builder #filterBuilder attr="thefilter" filters="CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES" [target]="grid" query-on-change="yes"
+        query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
+    </div>
+  </div>
+  <div class="content-container">
+    <div fxLayout="row" layout-padding fxLayoutAlign="center center">
+      <o-grid #grid columns="ID;IMG;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-page-size="yes"
+        page-size-options="24;32;64" grid-item-height="400px" fxFlex="calc(100% - 42px)" gutter-size="10px" service-type="DummyService">
+        <o-grid-item *ngFor="let grd of grid.dataArray">
+          <o-column layout-padding class="container-item" layout-align="center">
+            <img [src]="grd.IMG" style="margin:8px; width: 90%; height: 90%;">
+            <h4> {{grd.DESCRIPTION}} </h4>
+            <o-row>
+              <o-button attr="view-btn" label="View" (click)="openDetail(grd.ID)"></o-button>
+              <o-button attr="download-btn" label="Download"></o-button>
+            </o-row>
+          </o-column>
+        </o-grid-item>
+      </o-grid>
+    </div>
+  </div>
+
 </o-form>

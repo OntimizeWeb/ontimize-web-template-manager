@@ -1,9 +1,9 @@
-import { Component, Injector, ViewChild } from '@angular/core';
+import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CheckboxData } from './checkbox-data';
-import { Expression, FilterExpressionUtils } from 'ontimize-web-ngx';
+import { Expression, FilterExpressionUtils, OCheckboxComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
-import { MatRadioGroup } from '@angular/material/radio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -13,17 +13,20 @@ import { MatRadioGroup } from '@angular/material/radio';
 export class HomeComponent {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
+  @ViewChild('enableChk', { static: true }) private checkbox: OCheckboxComponent;
 
   service: DummyService;
 
   constructor(
-    protected injector: Injector
+    protected injector: Injector,
+    protected router: Router
   ) {
     this.service = this.injector.get(DummyService);
   }
 
   ngOnInit(): void {
     this.configureService();
+    this.checkbox.setValue(true);
   }
 
   protected configureService() {
@@ -66,4 +69,7 @@ export class HomeComponent {
     this.sidenav.toggle()
   }
 
+  openDetail(templateId) {
+    this.router.navigate(['main/detail/', templateId]);
+  }
 }
