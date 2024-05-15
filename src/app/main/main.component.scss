@@ -1,13 +1,23 @@
 .top-bar {
-  background-color: gray;
-  vertical-align: middle;
+  background-color: #DADDDF;
+  height: 96px;
+  border-style: solid;
+  border-color: #00000029;
+  border-width: 3px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  align-content: center;
+
+  >img {
+    margin-left: 60px;
+  }
 }
 
 .main-container {
-  background-color: transparent;
+  background-color: #F0F2F4;
   position: absolute;
   height: calc(100% - 75px);
   width: calc(100% - 16px);
   padding: 8px;
-
 }

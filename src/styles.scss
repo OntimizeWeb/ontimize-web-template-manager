@@ -1,7 +1,27 @@
 mat-grid-tile.mat-grid-tile.ng-star-inserted {
   background-color: white;
+  height: fit-content;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 0px #00000040;
 
-  img {
-    align-self: center;
+  .container-item {
+    >img {
+      margin-left: 95%;
+    }
+
+    >img:first-child {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+o-data-toolbar {
+  position: fixed;
+  top: 16px;
+  left: -50%;
+
+  o-search-input {
+    background-color: #F0F2F4;
   }
 }
