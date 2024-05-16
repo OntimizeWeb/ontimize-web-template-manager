@@ -1,0 +1,46 @@
+@use '@angular/material'as mat;
+
+@mixin main-theme($theme) {
+  $primary: map-get($theme, color, primary);
+  $accent: map-get($theme, color, accent);
+  $warn: map-get($theme, color, warn);
+  $typography: map-get($theme, typography);
+  $background: map-get($theme, color, background);
+  $foreground: map-get($theme, color, foreground);
+  $is-dark: map-get($theme, color, is-dark);
+
+  .top-bar {
+    @if $is-dark {
+      background-color: #293239;
+      border-color: mat.get-color-from-palette($background, level-0);
+    }
+
+    @else {
+      background-color: mat.get-color-from-palette($foreground, divider);
+      border-color: mat.get-color-from-palette($background, level-0);
+    }
+
+  }
+
+  .main-container {
+    @if $is-dark {
+      background-color: #293239;
+    }
+
+    @else {
+      background-color: #F0F2F4;
+    }
+  }
+
+  o-data-toolbar {
+    o-search-input {
+      @if $is-dark {
+        background-color: transparent;
+      }
+
+      @else {
+        background-color: #F0F2F4;
+      }
+    }
+  }
+}

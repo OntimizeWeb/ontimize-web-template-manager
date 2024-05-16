@@ -1,9 +1,10 @@
 import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CheckboxData } from './checkbox-data';
-import { Expression, FilterExpressionUtils, OCheckboxComponent } from 'ontimize-web-ngx';
+import { AppearanceService, Expression, FilterExpressionUtils, OCheckboxComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
+import { MainComponent } from '../main.component';
 
 @Component({
   selector: 'home',
@@ -16,12 +17,18 @@ export class HomeComponent {
   @ViewChild('enableChk', { static: true }) private checkbox: OCheckboxComponent;
 
   service: DummyService;
+  light: boolean;
 
   constructor(
     protected injector: Injector,
-    protected router: Router
+    protected router: Router,
+    protected appeareanceService: AppearanceService,
+    protected mainComponent: MainComponent
   ) {
     this.service = this.injector.get(DummyService);
+    mainComponent.getDarkMode.subscribe(mode => {
+      this.light = mode;
+    });
   }
 
   ngOnInit(): void {

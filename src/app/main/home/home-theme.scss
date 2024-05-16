@@ -1,0 +1,86 @@
+@use '@angular/material'as mat;
+
+@mixin home-theme($theme) {
+  $primary: map-get($theme, color, primary);
+  $accent: map-get($theme, color, accent);
+  $warn: map-get($theme, color, warn);
+  $typography: map-get($theme, typography);
+  $background: map-get($theme, color, background);
+  $foreground: map-get($theme, color, foreground);
+  $is-dark: map-get($theme, color, is-dark);
+
+  @if $is-dark {
+    mat-grid-tile.mat-grid-tile.ng-star-inserted {
+      border: 2px solid #2B353D;
+      box-shadow: none;
+    }
+
+    .home-container {
+      .filters {
+        o-checkbox {
+          border-color: #00000029;
+          background-color: #242A2E;
+        }
+      }
+    }
+
+    .content-container {
+      .container-item {
+        h4 {
+          color: #B9D1E4;
+        }
+
+        h5 {
+          color: #FFFFFFBD;
+        }
+      }
+
+      h1 {
+        color: #FFFFFFDE;
+      }
+
+      h2 {
+        color: #75A7FF;
+      }
+    }
+
+    mat-grid-tile.mat-grid-tile.ng-star-inserted {
+      background-color: #242A2E;
+    }
+  }
+
+  @else {
+    mat-grid-tile.mat-grid-tile.ng-star-inserted {
+      box-shadow: 0px 4px 8px 0px #00000040;
+    }
+
+    .home-container {
+      .filters {
+        o-checkbox {
+          border-color: #00000029;
+          background-color: #DADDDF;
+        }
+      }
+    }
+
+    .content-container {
+      .container-item {
+        h4 {
+          color: #1464A5;
+        }
+
+        h5 {
+          color: #000000BD;
+        }
+      }
+
+      h1 {
+        color: #293239;
+      }
+
+      h2 {
+        color: #1464A5;
+      }
+    }
+  }
+}

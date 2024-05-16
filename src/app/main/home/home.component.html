@@ -27,7 +27,8 @@
               <img [src]="grd.IMG" alt="template-img" height="160px">
               <h4> {{grd.TITLE}} </h4>
               <h5> {{grd.DESCRIPTION}}</h5>
-              <img src="../../../assets/images/open_detail_light.png" height="15px" width="15px">
+              <img *ngIf="light" src="../../../assets/images/open_detail_light.png" height="15px" width="15px">
+              <img *ngIf="!light" src="../../../assets/images/open_detail_dark.png" height="15px" width="15px">
             </div>
           </o-grid-item>
         </o-grid>
