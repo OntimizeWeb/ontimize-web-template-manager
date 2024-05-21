@@ -2,6 +2,7 @@
 
   <div class="home-container">
     <div fxLayout="column" fxLayoutGap="18px" class="filters">
+      <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search"></o-search-input>
       <o-column-collapsible attr="filter_templates" title="Filter Templates">
         <o-checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
         <o-checkbox #enableChk attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
@@ -20,8 +21,8 @@
       <h1>ONTIMIZE WEB</h1>
       <h2>Web application framework based on Angular for building business software.</h2>
       <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-        <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no"
-        quick-filter-columns="TITLE;DESCRIPTION" grid-item-height="300px" fxFlex="calc(100% - 42px)" gutter-size="44px" service-type="DummyService">
+        <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no" quick-filter="no"
+        grid-item-height="300px" fxFlex="calc(100% - 42px)" gutter-size="44px" service-type="DummyService">
           <o-grid-item *ngFor="let grd of grid.dataArray">
             <div layout-padding class="container-item" layout-align="center">
               <img [src]="grd.IMG" alt="template-img" height="160px">

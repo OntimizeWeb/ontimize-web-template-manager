@@ -1,6 +1,6 @@
 import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CheckboxData } from './checkbox-data';
-import { AppearanceService, Expression, FilterExpressionUtils, OCheckboxComponent } from 'ontimize-web-ngx';
+import { AppearanceService, Expression, FilterExpressionUtils, OCheckboxComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
@@ -15,6 +15,8 @@ export class HomeComponent {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
   @ViewChild('enableChk', { static: true }) private checkbox: OCheckboxComponent;
+  @ViewChild('grid', { static: true }) private grid: OGridComponent;
+  @ViewChild('search', { static: true }) private search: OSearchInputComponent;
 
   service: DummyService;
   light: boolean;
@@ -34,15 +36,12 @@ export class HomeComponent {
   ngOnInit(): void {
     this.configureService();
     this.checkbox.setValue(true);
+    this.grid.registerQuickFilter(this.search);
   }
 
   protected configureService() {
     const conf = this.service.getDefaultServiceConfiguration('templates');
     this.service.configureService(conf);
-  }
-
-  getCheckboxes() {
-    return CheckboxData.getData();
   }
 
   createFilter(values: Array<{ attr, value }>): Expression {

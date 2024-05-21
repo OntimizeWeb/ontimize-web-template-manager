@@ -1,6 +1,7 @@
 mat-grid-tile.mat-grid-tile.ng-star-inserted {
   background-color: white;
-  height: fit-content;
+  max-width: 350px;
+  min-width: 350px;
   border-radius: 5px;
 
   .container-item {
@@ -15,9 +16,10 @@ mat-grid-tile.mat-grid-tile.ng-star-inserted {
   }
 }
 
-o-data-toolbar {
-  position: fixed;
-  top: 16px;
-  left: -50%;
-  z-index: 2;
+body {
+  overflow: hidden;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c40-0.mdc-text-field--filled.mdc-text-field--no-label {
+  background-color: #DADDDF;
 }

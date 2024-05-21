@@ -1,22 +1,17 @@
 <div class="top-bar">
   <img src="../../../../assets/images/ontimize_web_log.png" alt="Ontimize logo" height="40px" width="138px">
-  <div class="light-mode-container">
-    <button *ngIf="light" mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>light_mode</mat-icon>
-    </button>
-    <button *ngIf="!light" mat-icon-button [matMenuTriggerFor]="menu" class="dark-btn">
-      <mat-icon>dark_mode</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="setDarkMode(false)">
-        <mat-icon>light_mode</mat-icon>
-        <span>Light</span>
-      </button>
-      <button mat-menu-item (click)="setDarkMode(true)">
-        <mat-icon>dark_mode</mat-icon>
-        <span>Dark</span>
-      </button>
-    </mat-menu>
+  <div class="right-container">
+    <div class="light-mode-container">
+      <a href="https://ontimizeweb.github.io/docs/v15/" target="_blank">
+        <o-button attr="doc" label="Docs"></o-button>
+      </a>
+      <a href="https://github.com/OntimizeWeb" target="_blank">
+        <img src="../../assets/images/github_light.png" *ngIf="lightBtn" />
+        <img src="../../assets/images/github_dark.png" *ngIf="!lightBtn" />
+      </a>
+      <img src="../../assets/images/toggle_light.png" (click)="setDarkMode(true)" *ngIf="lightBtn" />
+      <img src="../../assets/images/toggle_dark.png" (click)="setDarkMode(false)" *ngIf="!lightBtn" />
+    </div>
   </div>
 </div>
 <div class="top-div"></div>

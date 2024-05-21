@@ -9,9 +9,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class MainComponent implements OnInit {
 
-  public light = new BehaviorSubject(false);
-  getDarkMode = this.light.asObservable();
   constructor(protected appeareanceService: AppearanceService) { }
+
+  private light = new BehaviorSubject(!this.appeareanceService.isDarkMode());
+  public getDarkMode = this.light.asObservable();
+  public lightBtn = this.light.value;
 
   ngOnInit(): void {
     this.light.next(!this.appeareanceService.isDarkMode());
@@ -20,6 +22,7 @@ export class MainComponent implements OnInit {
   setDarkMode(darkMode: boolean) {
     this.appeareanceService.setDarkMode(darkMode);
     this.light.next(!this.appeareanceService.isDarkMode());
+    this.lightBtn = this.light.value;
   }
 }
 

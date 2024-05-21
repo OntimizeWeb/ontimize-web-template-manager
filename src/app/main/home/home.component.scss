@@ -2,32 +2,46 @@
   display: flex;
   flex-direction: row;
   height: 100%;
+  overflow: hidden;
 
   .filters {
-    height: 100%;
+    height: calc(100% + 96px);
     padding: 0 44px 0 100px;
     overflow: auto;
     align-items: center;
     justify-content: center;
 
-    o-checkbox {
-      margin-bottom: 6px;
-      border-style: solid;
-      border-width: 1px;
-      border-radius: 5px;
-      border-top: 0;
-      border-left: 0;
-      border-right: 0;
+    .o-search-input {
+      width: 100%;
+    }
+
+    .o-column-collapsible {
+      width: 100%;
+
+      .o-checkbox {
+        margin-bottom: 6px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+      }
     }
   }
 }
 
 .content-container {
   flex-direction: column;
-  max-height: 100%;
+  height: calc(100% - 96px);
   width: 100%;
+  overflow: auto;
 
   .container-item {
+    >img {
+      height: 50%;
+    }
+
     h4 {
       margin-top: 5px;
       margin-left: 10px;
@@ -35,6 +49,7 @@
 
     h5 {
       margin-left: 10px;
+      margin-bottom: 5px;
     }
   }
 }
