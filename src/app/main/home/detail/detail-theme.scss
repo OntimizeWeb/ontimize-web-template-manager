@@ -1,0 +1,51 @@
+@use '@angular/material'as mat;
+
+@mixin detail-theme($theme) {
+  $primary: map-get($theme, color, primary);
+  $accent: map-get($theme, color, accent);
+  $warn: map-get($theme, color, warn);
+  $typography: map-get($theme, typography);
+  $background: map-get($theme, color, background);
+  $foreground: map-get($theme, color, foreground);
+  $is-dark: map-get($theme, color, is-dark);
+
+  .top-container {
+    button {
+      @if $is-dark {
+        color: #FFFFFF99;
+      }
+
+      @else {
+        color: #000000DE;
+      }
+    }
+  }
+
+  .right-container {
+    .img-container {
+      img {
+        @if $is-dark {
+          box-shadow: 6.6px 8.26px 14.86px 0px #00000040;
+        }
+
+        @else {
+          box-shadow: 0px 4px 4px 0px #00000029;
+        }
+      }
+    }
+  }
+
+  .left-container {
+
+    h1,
+    h3 {
+      @if $is-dark {
+        color: #FFFFFFDE;
+      }
+
+      @else {
+        color: #000000DE;
+      }
+    }
+  }
+}

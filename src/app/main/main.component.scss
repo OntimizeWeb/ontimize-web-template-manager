@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 192px);
   height: 95px;
   border-style: solid;
   border-width: 1px;
@@ -14,16 +14,12 @@
   border-right: 0;
   border-left: 0;
   position: fixed;
-  z-index: 1;
+  padding: 0 96px;
 
-  >img {
-    margin-left: 60px;
-  }
 
   .light-mode-container {
     display: flex;
-    column-gap: 15px;
-    margin-right: 60px;
+    column-gap: 28px;
 
     >a {
       align-self: center;

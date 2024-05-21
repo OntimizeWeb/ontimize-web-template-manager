@@ -1,9 +1,20 @@
-<div class="left-container">
-  <o-button attr="back-btn" label="&#8592; Go back" (click)="openHome()" color="accent"></o-button>
-  <h1>{{ templateTitle }}</h1>
-  <o-button attr="back-btn" label="Go to Github"></o-button>
+<div class="top-container">
+  <o-button attr="back-btn" label="&#8592; Go back" (click)="openHome()"></o-button>
 </div>
-<div class="right-container">
-  <div class="img-container"><img src="{{ templateImg }}" alt="Template image"></div>
-  <p>{{ templateDescription }}</p>
+<div class="bottom-container">
+  <div class="left-container">
+    <div class="text">
+      <h1>{{ templateTitle }}</h1>
+      <h3>{{ templateDescription }}</h3>
+    </div>
+    <a href="https://github.com/OntimizeWeb" target="_blank">
+      <div class="github-btn">
+        <img src="../../../../assets/images/github-btn.png" alt="Github icon" width="40px" height="40px">
+        Github Link
+      </div>
+    </a>
+  </div>
+  <div class="right-container">
+    <div class="img-container"><img src="{{ templateImg }}" alt="Template image"></div>
+  </div>
 </div>
