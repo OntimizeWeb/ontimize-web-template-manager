@@ -2,7 +2,7 @@
 
   <div class="home-container">
     <div fxLayout="column" fxLayoutGap="18px" class="filters">
-      <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search"></o-search-input>
+      <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" show-menu="false" columns="TITLE;DESCRIPTION"></o-search-input>
       <o-column-collapsible attr="filter_templates" title="Filter Templates">
         <o-checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
         <o-checkbox #enableChk attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>

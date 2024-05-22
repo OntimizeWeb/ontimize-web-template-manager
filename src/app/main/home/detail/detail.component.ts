@@ -13,6 +13,15 @@ export class DetailComponent implements OnInit {
   protected templateTitle: string;
   protected templateDescription: string;
   private service: DummyService;
+  protected galleryOptions = [
+  {
+    height: "935px",
+    width: "535px",
+    thumbnailsColumns: 3,
+    thumbnailsRows: 1,
+    layout: "thumbnails-bottom"
+  }
+  ];
 
   constructor(
     protected injector: Injector,
