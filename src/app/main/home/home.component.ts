@@ -1,6 +1,5 @@
-import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { CheckboxData } from './checkbox-data';
-import { AppearanceService, Expression, FilterExpressionUtils, OCheckboxComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
+import { Component, Injector, ViewChild } from '@angular/core';
+import { AppearanceService, Expression, FilterExpressionUtils, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
@@ -14,7 +13,6 @@ import { MainComponent } from '../main.component';
 export class HomeComponent {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
-  @ViewChild('enableChk', { static: true }) private checkbox: OCheckboxComponent;
   @ViewChild('grid', { static: true }) private grid: OGridComponent;
   @ViewChild('search', { static: true }) private search: OSearchInputComponent;
 
@@ -35,7 +33,6 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.configureService();
-    this.checkbox.setValue(true);
     this.grid.registerQuickFilter(this.search);
   }
 
@@ -49,18 +46,7 @@ export class HomeComponent {
     let filters = [];
     values.forEach(fil => {
       if (fil.value) {
-        if (fil.attr == "CHK_ALL") {
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 1));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 2));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 3));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 4));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 5));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 6));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 7));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 8));
-          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 9));
-        }
-        else if (fil.attr == "CHK_TABLES") {
+        if (fil.attr == "CHK_TABLES") {
           filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 1));
         }
         else if (fil.attr == "CHK_GRIDS") {
@@ -93,7 +79,7 @@ export class HomeComponent {
     if (filters.length > 0) {
       return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
     } else {
-      return null;
+      return FilterExpressionUtils.buildExpressionIn("TYPE", Array.from({ length: 10 }, (_, i) => i + 1));
     }
   }
 
@@ -104,4 +90,5 @@ export class HomeComponent {
   openDetail(templateId) {
     this.router.navigate(['main/detail/', templateId]);
   }
+
 }

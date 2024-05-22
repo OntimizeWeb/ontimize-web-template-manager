@@ -16,7 +16,20 @@
     }
 
     .home-container {
+
       .filters {
+        p {
+          color: #FFFFFFBD;
+        }
+
+        .o-search-input {
+          box-shadow: 0px 0px 0px 1px #FFFFFF24;
+
+          .mat-mdc-form-field-icon-prefix {
+            background-color: #2A333A;
+          }
+        }
+
         o-checkbox {
           border-color: #00000029;
           background-color: #242A2E;
@@ -25,6 +38,7 @@
     }
 
     .content-container {
+
       .container-item {
         h4 {
           color: #B9D1E4;
@@ -55,7 +69,21 @@
     }
 
     .home-container {
+
       .filters {
+
+        .o-search-input {
+          box-shadow: 0px 0px 0px 1px #FFFFFF24;
+
+          .mat-mdc-form-field-icon-prefix {
+            background-color: #D3D5D6;
+          }
+        }
+
+        p {
+          color: #000000BD;
+        }
+
         o-checkbox {
           border-color: #00000029;
           background-color: #DADDDF;
@@ -64,6 +92,7 @@
     }
 
     .content-container {
+
       .container-item {
         h4 {
           color: #1464A5;

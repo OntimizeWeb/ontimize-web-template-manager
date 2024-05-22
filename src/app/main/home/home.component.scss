@@ -4,23 +4,30 @@
   height: 100%;
   overflow: hidden;
 
+
   .filters {
-    height: calc(100% - 190px);
-    padding: 0 44px 0 100px;
-    overflow: auto;
+    height: 100%;
+    padding: 150px 44px 0 100px;
     align-items: center;
-    margin-top: 190px;
+    overflow: auto;
 
     >p {
       align-self: flex-start;
+      margin-top: 0;
     }
 
     .o-search-input {
       width: 100%;
+      border-radius: 3px;
     }
 
-    .o-column-collapsible {
+    .collapsible.o-column-collapsible {
       width: 100%;
+      text-wrap: nowrap;
+
+      >.o-container>.mat-expansion-panel-header .o-container-title span {
+        font-weight: 700;
+      }
 
       .o-checkbox {
         margin-bottom: 6px;
@@ -33,27 +40,39 @@
       }
     }
   }
-}
 
-.content-container {
-  flex-direction: column;
-  height: calc(100% - 96px);
-  width: 100%;
-  overflow: auto;
 
-  .container-item {
-    >img {
-      height: 50%;
-    }
+  .content-container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-left: 20px;
 
-    h4 {
-      margin-top: 5px;
-      margin-left: 10px;
-    }
+    .o-grid {
+      width: 100%;
+      margin-right: 100px;
 
-    h5 {
-      margin-left: 10px;
-      margin-bottom: 5px;
+      .container-item {
+        padding: 0;
+        height: 100%;
+
+        h4 {
+          margin-top: 5px;
+          margin-left: 10px;
+        }
+
+        h5 {
+          margin-left: 10px;
+          margin-bottom: 5px;
+        }
+
+        .open-icon {
+          margin-left: calc(100% - 31px);
+        }
+      }
+
     }
   }
+
 }

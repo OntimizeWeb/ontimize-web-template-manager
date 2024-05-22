@@ -13,11 +13,21 @@
     @if $is-dark {
       background-color: #28343E;
       border-color: mat.get-color-from-palette($background, level-0);
+
+      .doc-btn {
+        border-color: #FFFFFF61;
+        color: #FFFFFFBD;
+      }
     }
 
     @else {
       background-color: mat.get-color-from-palette($foreground, divider);
       border-color: mat.get-color-from-palette($background, level-0);
+
+      .doc-btn {
+        border-color: #00000061;
+        color: #000000BD;
+      }
     }
 
   }

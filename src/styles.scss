@@ -1,17 +1,35 @@
 mat-grid-tile.mat-grid-tile.ng-star-inserted {
   background-color: white;
   max-width: 350px;
-  min-width: 350px;
   border-radius: 5px;
 
   .container-item {
-    >img {
-      margin-left: 95%;
-    }
 
     >img:first-child {
       margin-left: 0;
       width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.o-search-input {
+
+  .mdc-line-ripple.ng-tns-c40-0.mdc-line-ripple--deactivating.ng-star-inserted {
+    display: none;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    border-radius: 3px;
+
+
+  }
+
+  .mat-mdc-form-field-flex {
+    padding-left: 0 !important;
+
+    .mat-mdc-form-field-icon-prefix {
+      padding-left: 6px;
     }
   }
 }
