@@ -49,7 +49,18 @@ export class HomeComponent {
     let filters = [];
     values.forEach(fil => {
       if (fil.value) {
-        if (fil.attr == "CHK_TABLES") {
+        if (fil.attr == "CHK_ALL") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 1));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 2));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 3));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 4));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 5));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 6));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 7));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 8));
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 9));
+        }
+        else if (fil.attr == "CHK_TABLES") {
           filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 1));
         }
         else if (fil.attr == "CHK_GRIDS") {
@@ -60,6 +71,21 @@ export class HomeComponent {
         }
         else if (fil.attr == "CHK_TREES") {
           filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 4));
+        }
+        else if (fil.attr == "CHK_TAB") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 5));
+        }
+        else if (fil.attr == "CHK_DIALOG") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 6));
+        }
+        else if (fil.attr == "CHK_SPLIT_PANE") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 7));
+        }
+        else if (fil.attr == "CHK_CONTAINERS") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 8));
+        }
+        else if (fil.attr == "CHK_LOGIN") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 9));
         }
       }
     });

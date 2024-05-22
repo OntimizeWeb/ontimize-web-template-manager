@@ -2,10 +2,12 @@
 
   <div class="home-container">
     <div fxLayout="column" fxLayoutGap="18px" class="filters">
+      <p>Filter templates</p>
       <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search"></o-search-input>
-      <o-column-collapsible attr="filter_templates" title="Filter Templates">
+      <o-column-collapsible attr="filter_templates" title="Use Case">
+        <o-checkbox #enableChk attr="CHK_ALL" label="ALL" read-only="no"></o-checkbox>
         <o-checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
-        <o-checkbox #enableChk attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
+        <o-checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
         <o-checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
         <o-checkbox attr="CHK_TREES" label="Trees" read-only="no"></o-checkbox>
         <o-checkbox attr="CHK_TAB" label="Tab" read-only="no"></o-checkbox>
@@ -14,12 +16,12 @@
         <o-checkbox attr="CHK_CONTAINERS" label="Containers" read-only="no"></o-checkbox>
         <o-checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
       </o-column-collapsible>
-      <o-filter-builder #filterBuilder attr="thefilter" filters="CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES" [target]="grid" query-on-change="yes"
+      <o-filter-builder #filterBuilder attr="thefilter" filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN" [target]="grid" query-on-change="yes"
         query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
     </div>
     <div class="content-container">
-      <h1>ONTIMIZE WEB</h1>
-      <h2>Web application framework based on Angular for building business software.</h2>
+      <h1>FIND YOUR TEMPLATE</h1>
+      <h2>Begin the developing process with Ontimize prebuilding solutions and our library.</h2>
       <div fxLayout="row" layout-padding fxLayoutAlign="center center">
         <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no" quick-filter="no"
         grid-item-height="300px" fxFlex="calc(100% - 42px)" gutter-size="44px" service-type="DummyService">

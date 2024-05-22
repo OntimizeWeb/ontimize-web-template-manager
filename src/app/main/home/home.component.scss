@@ -5,11 +5,15 @@
   overflow: hidden;
 
   .filters {
-    height: calc(100% + 96px);
+    height: calc(100% - 190px);
     padding: 0 44px 0 100px;
     overflow: auto;
     align-items: center;
-    justify-content: center;
+    margin-top: 190px;
+
+    >p {
+      align-self: flex-start;
+    }
 
     .o-search-input {
       width: 100%;
