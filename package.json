@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-template-manager",
-  "version": "15.1.0-SNAPSHOT-0",
+  "version": "1.0.0-SNAPSHOT-0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4299",
@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "production": "ng build --base-href=/ontimize-web-template-manager/"
+    "production": "ng build --configuration production",
+    "production-aot-server": "ng build --configuration production --base-href /ontimizeweb/"
   },
   "private": true,
   "engines": {
