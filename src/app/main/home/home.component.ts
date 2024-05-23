@@ -4,6 +4,7 @@ import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { MainComponent } from '../main.component';
+import { ImageService } from '../../shared/services/image.service';
 
 @Component({
   selector: 'home',
@@ -17,6 +18,7 @@ export class HomeComponent {
   @ViewChild('search', { static: true }) private search: OSearchInputComponent;
 
   service: DummyService;
+  imageService: ImageService;
   light: boolean;
 
   constructor(
@@ -26,6 +28,7 @@ export class HomeComponent {
     protected mainComponent: MainComponent
   ) {
     this.service = this.injector.get(DummyService);
+    this.imageService = this.injector.get(ImageService);
     mainComponent.getDarkMode.subscribe(mode => {
       this.light = mode;
     });
@@ -34,6 +37,11 @@ export class HomeComponent {
   ngOnInit(): void {
     this.configureService();
     this.grid.registerQuickFilter(this.search);
+
+  }
+
+  protected getImgUrl(name: string) {
+    return this.imageService.getImgUrl(name);
   }
 
   protected configureService() {

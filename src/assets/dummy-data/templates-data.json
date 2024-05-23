@@ -6,35 +6,35 @@
   "data": [
     {
       "ID": 1,
-      "IMG": "../../assets/images/template-images/template1.png",
+      "IMG": "template1.png",
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9
     },
     {
       "ID": 2,
-      "IMG": "../../assets/images/template-images/template2.png",
+      "IMG": "template2.png",
       "TITLE": "Simple grid example",
       "DESCRIPTION": "This is the template of a grid for your Ontimize applications.",
       "TYPE": 2
     },
     {
       "ID": 3,
-      "IMG": "../../assets/images/template-images/template3.png",
+      "IMG": "template3.png",
       "TITLE": "Fixed grid example",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 2
     },
     {
       "ID": 4,
-      "IMG": "../../assets/images/template-images/template4.png",
+      "IMG": "template4.png",
       "TITLE": "Custom grid template",
       "DESCRIPTION": "This is the template of a custom grid for your Ontimize applications.",
       "TYPE": 2
     },
     {
       "ID": 5,
-      "IMG": "../../assets/images/template-images/template5.png",
+      "IMG": "template5.png",
       "TITLE": "Login page template",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9
