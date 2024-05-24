@@ -13,16 +13,14 @@ mat-grid-tile.mat-grid-tile.ng-star-inserted {
   }
 }
 
-.o-search-input {
+.search-filter.o-search-input {
 
-  .mdc-line-ripple.ng-tns-c40-0.mdc-line-ripple--deactivating.ng-star-inserted {
+  .mdc-line-ripple {
     display: none;
   }
 
   .mat-mdc-text-field-wrapper {
     border-radius: 3px;
-
-
   }
 
   .mat-mdc-form-field-flex {

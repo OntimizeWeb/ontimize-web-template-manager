@@ -41,14 +41,4 @@
       background-color: #F0F2F4;
     }
   }
-
-  .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c40-0.mdc-text-field--filled.mdc-text-field--no-label {
-    @if $is-dark {
-      background-color: #242A2E;
-    }
-
-    @else {
-      background-color: #DADDDF;
-    }
-  }
 }
