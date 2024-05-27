@@ -1,28 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppearanceService } from 'ontimize-web-ngx';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
 
   constructor(protected appeareanceService: AppearanceService) { }
 
-  private light = new BehaviorSubject(!this.appeareanceService.isDarkMode());
-  public getDarkMode = this.light.asObservable();
-  public lightBtn = this.light.value;
-
-  ngOnInit(): void {
-    this.light.next(!this.appeareanceService.isDarkMode());
-  }
-
-  setDarkMode(darkMode: boolean) {
-    this.appeareanceService.setDarkMode(darkMode);
-    this.light.next(!this.appeareanceService.isDarkMode());
-    this.lightBtn = this.light.value;
+  toggleDarkMode() {
+    if (this.appeareanceService.isDarkMode()) {
+      this.appeareanceService.setDarkMode(false);
+    } else {
+      this.appeareanceService.setDarkMode(true);
+    }
   }
 }
 

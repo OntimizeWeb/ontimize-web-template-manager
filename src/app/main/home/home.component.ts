@@ -3,7 +3,6 @@ import { AppearanceService, Expression, FilterExpressionUtils, OGridComponent, O
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
-import { MainComponent } from '../main.component';
 import { ImageService } from '../../shared/services/image.service';
 
 @Component({
@@ -24,14 +23,10 @@ export class HomeComponent {
   constructor(
     protected injector: Injector,
     protected router: Router,
-    protected appeareanceService: AppearanceService,
-    protected mainComponent: MainComponent
+    protected appeareanceService: AppearanceService
   ) {
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
-    mainComponent.getDarkMode.subscribe(mode => {
-      this.light = mode;
-    });
   }
 
   ngOnInit(): void {

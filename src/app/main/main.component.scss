@@ -24,6 +24,18 @@
     display: flex;
     column-gap: 15px;
     margin-right: 60px;
+    align-items: center;
+
+    .github-img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .toggle-theme {
+      cursor: pointer;
+      width: 62px;
+      height: 38px;
+    }
 
     .doc-btn {
       width: 80px;
@@ -44,17 +56,12 @@
     >a:first-child {
       height: fit-content;
     }
-
-    >img {
-      height: fit-content;
-      align-self: center;
-    }
   }
 }
 
 .main-container {
   position: absolute;
   height: calc(100% - 96px);
-  width: calc(100% - 16px);
+  width: 100%;
   overflow: auto;
 }

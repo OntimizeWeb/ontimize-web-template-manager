@@ -6,11 +6,9 @@
         <div class="doc-btn">Docs</div>
       </a>
       <a href="https://github.com/OntimizeWeb" target="_blank">
-        <img src="../../assets/images/github_light.png" *ngIf="lightBtn" />
-        <img src="../../assets/images/github_dark.png" *ngIf="!lightBtn" />
+        <div class="github-img"></div>
       </a>
-      <img src="../../assets/images/toggle_light.png" (click)="setDarkMode(true)" *ngIf="lightBtn" />
-      <img src="../../assets/images/toggle_dark.png" (click)="setDarkMode(false)" *ngIf="!lightBtn" />
+      <div (click)="toggleDarkMode()" class="toggle-theme"></div>
     </div>
   </div>
 </div>
