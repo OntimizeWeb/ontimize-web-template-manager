@@ -16,22 +16,22 @@
     @if $is-dark {
 
       .github-img {
-        background-image: url('../../assets/images/github_dark.png');
+        background-image: url('/assets/images/github_dark.png');
       }
 
       .toggle-theme {
-        background-image: url('../../assets/images/toggle_dark.png');
+        background-image: url('/assets/images/toggle_dark.png');
       }
     }
 
     @else {
 
       .github-img {
-        background-image: url('../../assets/images/github_light.png');
+        background-image: url('/assets/images/github_light.png');
       }
 
       .toggle-theme {
-        background-image: url('../../assets/images/toggle_light.png');
+        background-image: url('/assets/images/toggle_light.png');
       }
     }
 
