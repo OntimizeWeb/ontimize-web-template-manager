@@ -3,14 +3,16 @@
 @mixin main-theme($theme) {
   $primary: map-get($theme, color, primary);
   $is-dark: map-get($theme, color, is-dark);
+  $background: map-get($theme, color, background);
+  $foreground: map-get($theme, color, foreground);
 
   .top-bar {
-    background-color: mat.get-color-from-palette($primary, top-bar);
-    border-color: mat.get-color-from-palette($primary, top-bar-border);
+    background-color: mat.get-color-from-palette($background, app-bar);
+    border-color: mat.get-color-from-palette($foreground, divider);
 
     .doc-btn {
-      border-color: mat.get-color-from-palette($primary, doc-bnt-border);
-      color: mat.get-color-from-palette($primary, doc-btn-color);
+      border-color: mat.get-color-from-palette($foreground, divider);
+      color: mat.get-color-from-palette($foreground, button);
     }
 
     @if $is-dark {
@@ -38,6 +40,6 @@
   }
 
   .main-container {
-    background-color: mat.get-color-from-palette($primary, main-container);
+    background-color: mat.get-color-from-palette($background, level-08);
   }
 }

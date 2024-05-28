@@ -1,5 +1,5 @@
-import { Component, Injector, ViewChild } from '@angular/core';
-import { AppearanceService, Expression, FilterExpressionUtils, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
+import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Expression, FilterExpressionUtils, OCheckboxComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
@@ -15,15 +15,14 @@ export class HomeComponent {
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
   @ViewChild('grid', { static: true }) private grid: OGridComponent;
   @ViewChild('search', { static: true }) private search: OSearchInputComponent;
+  @ViewChildren('checkbox') private checkbox: QueryList<OCheckboxComponent>;
 
   service: DummyService;
   imageService: ImageService;
-  light: boolean;
 
   constructor(
     protected injector: Injector,
-    protected router: Router,
-    protected appeareanceService: AppearanceService
+    protected router: Router
   ) {
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
@@ -90,8 +89,12 @@ export class HomeComponent {
     this.sidenav.toggle()
   }
 
-  openDetail(templateId) {
-    this.router.navigate(['main/detail/', templateId]);
+  clearSelection() {
+    this.checkbox.forEach(chk => {
+      if (chk.getValue() == true) {
+        chk.clearValue();
+      }
+    });
   }
 
 }

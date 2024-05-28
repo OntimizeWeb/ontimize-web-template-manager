@@ -1,18 +1,26 @@
 <o-form editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
   <div class="home-container">
     <div fxLayout="column" fxLayoutGap="18px" class="filters">
-      <p>Filter templates</p>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <p>Filter templates</p>
+        <div class="clear-btn" fxLayoutAlign="center center" (click)="clearSelection()">
+          <span class="material-symbols-outlined">
+            cancel
+          </span>
+          <span>&nbsp;Clear&nbsp;</span>
+        </div>
+      </div>
       <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" columns="TITLE;DESCRIPTION" show-menu="no" class="search-filter"></o-search-input>
       <o-column-collapsible attr="filter_templates" title="Use Case" class="collapsible">
-        <o-checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_TREES" label="Trees" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_TAB" label="Tab" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_DIALOG" label="Dialog" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_SPLIT_PANE" label="Split pane" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_CONTAINERS" label="Containers" read-only="no"></o-checkbox>
-        <o-checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_TREES" label="Trees" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_TAB" label="Tab" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_DIALOG" label="Dialog" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_SPLIT_PANE" label="Split pane" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_CONTAINERS" label="Containers" read-only="no"></o-checkbox>
+        <o-checkbox #checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
       </o-column-collapsible>
       <o-filter-builder #filterBuilder attr="thefilter"
         filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN" [target]="grid"
@@ -29,7 +37,9 @@
               <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">
               <h4> {{grd.TITLE}} </h4>
               <h5> {{grd.DESCRIPTION}}</h5>
-              <div class="open-icon"></div>
+              <span class="material-symbols-outlined open-icon">
+                open_in_new
+              </span>
             </div>
           </o-grid-item>
         </o-grid>

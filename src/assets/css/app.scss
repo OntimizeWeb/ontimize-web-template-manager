@@ -1,5 +1,5 @@
 // Define your custom theme or choose predefined theme
-@use '../themes/custom-theme.scss'as theme;
+@use 'ontimize-web-ngx/theming/themes/ontimize.scss'as theme;
 @use 'ontimize-web-ngx/theming/ontimize-style.scss';
 
 // Include ontimize styles
