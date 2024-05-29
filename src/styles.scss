@@ -13,7 +13,15 @@ mat-grid-tile.mat-grid-tile.ng-star-inserted {
   }
 }
 
+.o-column-collapsible>.o-container.mat-expansion-panel .mat-expansion-panel-header .mat-expansion-panel-header-title span {
+  font-weight: 700;
+}
+
 .search-filter.o-search-input {
+
+  .quickFilter {
+    height: 40px;
+  }
 
   .mdc-line-ripple {
     display: none;
@@ -25,6 +33,7 @@ mat-grid-tile.mat-grid-tile.ng-star-inserted {
 
   .mat-mdc-form-field-flex {
     padding-left: 0 !important;
+    height: 40px !important;
 
     .mat-mdc-form-field-icon-prefix {
       padding-left: 6px;
@@ -34,4 +43,5 @@ mat-grid-tile.mat-grid-tile.ng-star-inserted {
 
 body {
   overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }

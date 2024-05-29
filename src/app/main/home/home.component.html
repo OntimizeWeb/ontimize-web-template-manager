@@ -1,7 +1,7 @@
 <o-form editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
   <div class="home-container">
     <div fxLayout="column" fxLayoutGap="18px" class="filters">
-      <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxLayout="row" class="top-filter">
         <p>Filter templates</p>
         <div class="clear-btn" fxLayoutAlign="center center" (click)="clearSelection()">
           <span class="material-symbols-outlined">
@@ -10,7 +10,7 @@
           <span>&nbsp;Clear&nbsp;</span>
         </div>
       </div>
-      <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" columns="TITLE;DESCRIPTION" show-menu="no" class="search-filter"></o-search-input>
+      <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" show-menu="no" class="search-filter"></o-search-input>
       <o-column-collapsible attr="filter_templates" title="Use Case" class="collapsible">
         <o-checkbox #checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
         <o-checkbox #checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
@@ -31,12 +31,12 @@
       <h2>Begin the developing process with Ontimize prebuilding solutions and our library.</h2>
       <div fxLayout="row" layout-padding fxLayoutAlign="center center">
         <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no"
-          quick-filter="no" grid-item-height="300px" gutter-size="44px" service-type="DummyService" [controls]="false" fxFlex>
+          quick-filter="no" grid-item-height="300px" gutter-size="44px" service-type="DummyService" [controls]="false" [cols]="columns" fxFlex>
           <o-grid-item *ngFor="let grd of grid.dataArray">
             <div layout-padding class="container-item" layout-align="center">
               <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">
               <h4> {{grd.TITLE}} </h4>
-              <h5> {{grd.DESCRIPTION}}</h5>
+              <h5 [matTooltip]="grd.DESCRIPTION"> {{grd.DESCRIPTION}} </h5>
               <span class="material-symbols-outlined open-icon">
                 open_in_new
               </span>

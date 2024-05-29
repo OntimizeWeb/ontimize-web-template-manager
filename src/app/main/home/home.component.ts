@@ -1,24 +1,30 @@
-import { Component, Injector, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, Injector, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Expression, FilterExpressionUtils, OCheckboxComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { ImageService } from '../../shared/services/image.service';
+import { Subscription } from 'rxjs';
+import { MediaChange, MediaObserver } from '@angular/flex-layout';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
   @ViewChild('grid', { static: true }) private grid: OGridComponent;
   @ViewChild('search', { static: true }) private search: OSearchInputComponent;
   @ViewChildren('checkbox') private checkbox: QueryList<OCheckboxComponent>;
 
+  protected subscription: Subscription = new Subscription();
+  protected media: MediaObserver;
+
   service: DummyService;
   imageService: ImageService;
+  columns: number;
 
   constructor(
     protected injector: Injector,
@@ -26,12 +32,34 @@ export class HomeComponent {
   ) {
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
+    this.media = this.injector.get(MediaObserver);
   }
 
   ngOnInit(): void {
     this.configureService();
+    this.subscribeToMediaChanges();
     this.grid.registerQuickFilter(this.search);
+  }
 
+  public subscribeToMediaChanges(): void {
+    this.subscription.add(this.media.asObservable().subscribe((change: MediaChange[]) => {
+      if (change && change[0]) {
+        switch (change[0].mqAlias) {
+          case 'xs':
+          case 'sm':
+            this.columns = 1;
+            break;
+          case 'md':
+            this.columns = 2;
+            break;
+          case 'lg':
+            this.columns = 3;
+            break;
+          case 'xl':
+            this.columns = 4;
+        }
+      }
+    }));
   }
 
   protected getImgUrl(name: string) {
@@ -95,6 +123,9 @@ export class HomeComponent {
         chk.clearValue();
       }
     });
+    if (this.search.getValue() != "") {
+      this.search.setValue("")
+    }
   }
 
 }

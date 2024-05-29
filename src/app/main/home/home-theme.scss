@@ -11,7 +11,7 @@
 
       .clear-btn {
         color: mat.get-color-from-palette($foreground, button);
-        background-color: mat.get-color-from-palette($background, level-0);
+        border: 1px solid mat.get-color-from-palette($background, level-0);
       }
 
       p {
@@ -60,6 +60,10 @@
       border: 2px solid mat.get-color-from-palette($foreground, divider);
       box-shadow: none;
       background-color: #242A2E;
+    }
+
+    .o-grid-no-results {
+      color: mat.get-color-from-palette($foreground, title);
     }
 
     .content-container {
