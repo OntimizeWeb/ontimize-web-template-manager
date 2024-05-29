@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   service: DummyService;
   imageService: ImageService;
   columns: number;
-  showClear: boolean;
+  hideBtn: boolean;
 
   constructor(
     protected injector: Injector,
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
     this.media = this.injector.get(MediaObserver);
-    this.showClear = false;
+    this.hideBtn = true;
   }
 
   ngOnInit(): void {
@@ -109,10 +109,10 @@ export class HomeComponent implements OnInit {
     });
 
     if (filters.length > 0) {
-      this.showClear = true;
+      this.hideBtn = false;
       return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
     } else {
-      this.showClear = false;
+      this.hideBtn = true;
       return FilterExpressionUtils.buildExpressionIn("TYPE", Array.from({ length: 10 }, (_, i) => i + 1));
     }
   }

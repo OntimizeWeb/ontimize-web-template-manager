@@ -5,7 +5,7 @@
     <div fxLayout="column" fxLayoutGap="18px" class="filters">
       <div fxLayout="row" class="top-filter">
         <p>Filter templates</p>
-        <div fxLayoutAlign="center center" (click)="clearSelection()" [ngClass]="{'clear-btn': true, 'hide-btn' : !showClear}">
+        <div fxLayoutAlign="center center" (click)="clearSelection()" [ngClass]="{'clear-btn': true, 'hide-btn' : hideBtn}">
           <span class="material-symbols-outlined">
             cancel
           </span>
