@@ -6,6 +6,14 @@
   $background: map-get($theme, color, background);
   $foreground: map-get($theme, color, foreground);
 
+  h1 {
+    color: mat.get-color-from-palette($foreground, title);
+  }
+
+  h2 {
+    color: mat.get-color-from-palette($primary, 500);
+  }
+
   .home-container {
     .filters {
 
@@ -44,14 +52,6 @@
       h5 {
         color: mat.get-color-from-palette($foreground, button);
       }
-    }
-
-    h1 {
-      color: mat.get-color-from-palette($foreground, title);
-    }
-
-    h2 {
-      color: mat.get-color-from-palette($primary, 500);
     }
   }
 
