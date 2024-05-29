@@ -10,7 +10,7 @@
     .filters {
 
       .clear-btn {
-        color: mat.get-color-from-palette($foreground, button);
+        color: mat.get-color-from-palette($foreground, title);
         border: 1px solid mat.get-color-from-palette($background, level-0);
       }
 
