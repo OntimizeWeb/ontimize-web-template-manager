@@ -1,48 +1,52 @@
 <o-form #form editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
-  <h1>FIND YOUR TEMPLATE</h1>
-  <h2>Begin the developing process with Ontimize prebuilding solutions and our library.</h2>
-  <div class="home-container">
-    <div fxLayout="column" fxLayoutGap="18px" class="filters">
-      <div fxLayout="row" class="top-filter">
-        <p>Filter templates</p>
-        <div fxLayoutAlign="center center" (click)="clearSelection()" [ngClass]="{'clear-btn': true, 'hide-btn' : hideBtn}">
-          <span class="material-symbols-outlined">
-            cancel
-          </span>
-          <span>&nbsp;Clear&nbsp;</span>
-        </div>
-      </div>
-      <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" show-menu="no" class="search-filter"></o-search-input>
-      <o-column-collapsible attr="filter_templates" title="Use Case" class="collapsible">
-        <o-checkbox #checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_TREES" label="Trees" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_TAB" label="Tab" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_DIALOG" label="Dialog" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_SPLIT_PANE" label="Split pane" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_CONTAINERS" label="Containers" read-only="no"></o-checkbox>
-        <o-checkbox #checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
-      </o-column-collapsible>
-      <o-filter-builder #filterBuilder attr="thefilter"
-        filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN" [target]="grid"
-        query-on-change="yes" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
-    </div>
-    <div class="content-container">
-      <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-        <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no"
-          quick-filter="no" grid-item-height="300px" gutter-size="44px" service-type="DummyService" [controls]="false" [cols]="columns" fxFlex>
-          <o-grid-item *ngFor="let grd of grid.dataArray">
-            <div layout-padding class="container-item" layout-align="center">
-              <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">
-              <h4> {{grd.TITLE}} </h4>
-              <h5 [matTooltip]="grd.DESCRIPTION"> {{grd.DESCRIPTION}} </h5>
-              <span class="material-symbols-outlined open-icon">
-                open_in_new
+  <div class="main-overflow">
+    <div class="main-margin">
+      <h1>FIND YOUR TEMPLATE</h1>
+      <h2>Begin the developing process with Ontimize prebuilding solutions and our library.</h2>
+      <div class="home-container">
+        <div fxLayout="column" fxLayoutGap="18px" class="filters">
+          <div fxLayout="row" class="top-filter">
+            <p>Filter templates</p>
+            <div fxLayoutAlign="center center" (click)="clearSelection()" class="clear-btn" [ngClass]="{'hide-btn' : hideBtn}">
+              <span class="material-symbols-outlined">
+                cancel
               </span>
+              <span>&nbsp;Clear&nbsp;</span>
             </div>
-          </o-grid-item>
-        </o-grid>
+          </div>
+          <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" show-menu="no" class="search-filter"></o-search-input>
+          <o-column-collapsible attr="filter_templates" title="Use Case" class="collapsible">
+            <o-checkbox #checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_TREES" label="Trees" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_TAB" label="Tab" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_DIALOG" label="Dialog" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_SPLIT_PANE" label="Split pane" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_CONTAINERS" label="Containers" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
+          </o-column-collapsible>
+          <o-filter-builder #filterBuilder attr="thefilter"
+            filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN" [target]="grid"
+            query-on-change="yes" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
+        </div>
+        <div class="content-container">
+          <div fxLayout="row" layout-padding fxLayoutAlign="center center">
+            <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no"
+              quick-filter="no" grid-item-height="300px" gutter-size="44px" service-type="DummyService" [controls]="false" [cols]="columns" fxFlex>
+              <o-grid-item *ngFor="let grd of grid.dataArray">
+                <div layout-padding class="container-item" layout-align="center">
+                  <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">
+                  <h4> {{grd.TITLE}} </h4>
+                  <h5 [matTooltip]="grd.DESCRIPTION"> {{grd.DESCRIPTION}} </h5>
+                  <span class="material-symbols-outlined open-icon">
+                    open_in_new
+                  </span>
+                </div>
+              </o-grid-item>
+            </o-grid>
+          </div>
+        </div>
       </div>
     </div>
   </div>

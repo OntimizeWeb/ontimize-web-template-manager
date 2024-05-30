@@ -1,5 +1,5 @@
-import { Component, Injector, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { Expression, FilterExpressionUtils, OCheckboxComponent, OFormComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
+import { AfterViewInit, Component, Injector, OnDestroy, OnInit, QueryList, SimpleChange, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { Expression, FilterExpressionUtils, OCheckboxComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
@@ -10,13 +10,14 @@ import { MediaChange, MediaObserver } from '@angular/flex-layout';
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
-  @ViewChild('grid', { static: true }) private grid: OGridComponent;
-  @ViewChild('search', { static: true }) private search: OSearchInputComponent;
+  @ViewChild('grid', { static: false }) private grid: OGridComponent;
+  @ViewChild('search', { static: false }) private search: OSearchInputComponent;
   @ViewChildren('checkbox') private checkbox: QueryList<OCheckboxComponent>;
 
   protected subscription: Subscription = new Subscription();
@@ -34,13 +35,19 @@ export class HomeComponent implements OnInit {
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
     this.media = this.injector.get(MediaObserver);
-    this.hideBtn = true;
+  }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+  ngAfterViewInit(): void {
+    this.filterChangesEvents();
+    this.grid.registerQuickFilter(this.search);
   }
 
   ngOnInit(): void {
     this.configureService();
     this.subscribeToMediaChanges();
-    this.grid.registerQuickFilter(this.search);
+    this.hideBtn = true;
   }
 
   public subscribeToMediaChanges(): void {
@@ -55,10 +62,8 @@ export class HomeComponent implements OnInit {
             this.columns = 2;
             break;
           case 'lg':
-            this.columns = 3;
-            break;
           case 'xl':
-            this.columns = 4;
+            this.columns = 3;
         }
       }
     }));
@@ -109,10 +114,8 @@ export class HomeComponent implements OnInit {
     });
 
     if (filters.length > 0) {
-      this.hideBtn = false;
       return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
     } else {
-      this.hideBtn = true;
       return FilterExpressionUtils.buildExpressionIn("TYPE", Array.from({ length: 10 }, (_, i) => i + 1));
     }
   }
@@ -130,6 +133,25 @@ export class HomeComponent implements OnInit {
     if (this.search.getValue() != "") {
       this.search.setValue("")
     }
+  }
+
+  filterChangesEvents() {
+    this.checkbox.forEach(chk => {
+      chk.onValueChange.subscribe(value => {
+        if (value.newValue == true) {
+          this.hideBtn = false;
+        } else {
+          this.hideBtn = true;
+        }
+      });
+    });
+    this.search.onSearch.subscribe(search => {
+      if (search) {
+        this.hideBtn = false;
+      } else {
+        this.hideBtn = true;
+      }
+    });
   }
 
 }
