@@ -6,55 +6,61 @@
   $background: map-get($theme, color, background);
   $foreground: map-get($theme, color, foreground);
 
-  h1 {
-    color: mat.get-color-from-palette($foreground, title);
-  }
-
-  h2 {
-    color: mat.get-color-from-palette($primary, 500);
-  }
-
-  .home-container {
-    .filters {
-
-      .clear-btn {
+  .main-overflow {
+    .main-margin {
+      h1 {
         color: mat.get-color-from-palette($foreground, title);
-        border: 1px solid mat.get-color-from-palette($background, level-0);
       }
 
-      p {
-        color: mat.get-color-from-palette($foreground, button);
-      }
-
-      .search-filter.o-search-input {
-        .mat-mdc-text-field-wrapper.mdc-text-field {
-          background-color: mat.get-color-from-palette($background, level-0);
-        }
-
-        .mat-mdc-form-field-icon-prefix {
-          background-color: mat.get-color-from-palette($foreground, divider);
-        }
-      }
-
-      o-checkbox {
-        border-color: #00000029;
-        background-color: mat.get-color-from-palette($background, level-0);
-      }
-    }
-  }
-
-  .mat-grid-tile:hover {
-    border: 1px solid mat.get-color-from-palette($primary, 500);
-  }
-
-  .content-container {
-    .container-item {
-      h4 {
+      h2 {
         color: mat.get-color-from-palette($primary, 500);
       }
 
-      h5 {
-        color: mat.get-color-from-palette($foreground, button);
+      .home-container {
+        .filters {
+
+          .clear-btn {
+            color: mat.get-color-from-palette($foreground, title);
+            border: 1px solid mat.get-color-from-palette($background, level-0);
+          }
+
+          p {
+            color: mat.get-color-from-palette($foreground, button);
+          }
+
+          .search-filter.o-search-input {
+            .mat-mdc-text-field-wrapper.mdc-text-field {
+              background-color: mat.get-color-from-palette($background, level-0);
+            }
+
+            .mat-mdc-form-field-icon-prefix {
+              background-color: mat.get-color-from-palette($foreground, divider);
+            }
+          }
+
+          o-checkbox {
+            border-color: #00000029;
+            background-color: mat.get-color-from-palette($background, level-0);
+          }
+        }
+
+        .o-grid {
+          mat-grid-tile.mat-grid-tile:hover {
+            border: 1px solid mat.get-color-from-palette($primary, 500);
+          }
+        }
+
+        .content-container {
+          .container-item {
+            h4 {
+              color: mat.get-color-from-palette($primary, 500);
+            }
+
+            h5 {
+              color: mat.get-color-from-palette($foreground, button);
+            }
+          }
+        }
       }
     }
   }
