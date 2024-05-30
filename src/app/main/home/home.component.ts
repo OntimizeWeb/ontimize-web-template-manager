@@ -60,9 +60,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
           case 'lg':
           case 'xl':
             this.columns = 3;
-            break;
-          case 'xxl':
-            this.columns = 4;
         }
       }
     }));
