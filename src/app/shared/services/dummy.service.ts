@@ -124,7 +124,7 @@ export class DummyService extends OntimizeEEService {
       kv2 = (({ lop, rop }) => ({ lop, rop }))(kv["@basic_expression"]);
       if (kv2.lop != "TYPE") {
         this.reduceFilter(kv2, filter);
-      } else if (typeof kv2.rop != "number") {
+      } else if (typeof kv2.rop != "number" && !Array.isArray(kv2.rop)) {
         this.reduceFilter(kv2, filter);
       } else {
         filter.push(kv2.rop);
@@ -140,7 +140,7 @@ export class DummyService extends OntimizeEEService {
     }
     if (kv.hasOwnProperty("rop")) {
       kv2 = kv["rop"];
-      if (typeof kv2.rop != "number") {
+      if (typeof kv2.rop != "number" && !Array.isArray(kv2.rop)) {
         this.reduceFilter(kv2, filter);
       } else {
         filter.push(kv2.rop);
@@ -163,8 +163,11 @@ export class DummyService extends OntimizeEEService {
     resp.data.forEach(element => {
       if (filters.includes(element.TYPE)) {
         result.push(element);
-      } else if (filters.includes(element.ID)) {
-        result.push(element);
+      }
+      if (Array.isArray(filters[0])) {
+        if (filters[0].indexOf(element.TYPE) != -1) {
+          result.push(element);
+        }
       }
     });
     return result;

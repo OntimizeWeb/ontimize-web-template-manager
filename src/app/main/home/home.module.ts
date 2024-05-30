@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { DummyService } from '../../shared/services/dummy.service';
 import { DetailComponent } from './detail/detail.component';
+import { ImageService } from '../../shared/services/image.service';
 
 @NgModule({
   imports: [
@@ -17,6 +18,9 @@ import { DetailComponent } from './detail/detail.component';
     HomeComponent,
     DetailComponent
   ],
-  providers: [DummyService]
+  providers: [
+    DummyService,
+    ImageService
+  ]
 })
 export class HomeModule { }

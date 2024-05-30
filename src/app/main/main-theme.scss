@@ -2,43 +2,44 @@
 
 @mixin main-theme($theme) {
   $primary: map-get($theme, color, primary);
-  $accent: map-get($theme, color, accent);
-  $warn: map-get($theme, color, warn);
-  $typography: map-get($theme, typography);
+  $is-dark: map-get($theme, color, is-dark);
   $background: map-get($theme, color, background);
   $foreground: map-get($theme, color, foreground);
-  $is-dark: map-get($theme, color, is-dark);
 
   .top-bar {
+    background-color: mat.get-color-from-palette($background, app-bar);
+    border-color: mat.get-color-from-palette($foreground, divider);
+
+    .doc-btn {
+      border-color: mat.get-color-from-palette($foreground, divider);
+      color: mat.get-color-from-palette($foreground, button);
+    }
+
     @if $is-dark {
-      background-color: #28343E;
-      border-color: mat.get-color-from-palette($background, level-0);
+
+      .github-img {
+        background-image: url('/assets/images/github_dark.png');
+      }
+
+      .toggle-theme {
+        background-image: url('/assets/images/toggle_dark.png');
+      }
     }
 
     @else {
-      background-color: mat.get-color-from-palette($foreground, divider);
-      border-color: mat.get-color-from-palette($background, level-0);
+
+      .github-img {
+        background-image: url('/assets/images/github_light.png');
+      }
+
+      .toggle-theme {
+        background-image: url('/assets/images/toggle_light.png');
+      }
     }
 
   }
 
   .main-container {
-    @if $is-dark {
-      background-color: #293239;
-    }
-
-    @else {
-      background-color: #F0F2F4;
-    }
-  }
-
-  .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c40-0.mdc-text-field--filled.mdc-text-field--no-label {
-    @if $is-dark {
-      background-color: #242A2E;
-    }
-
-    @else {
-      background-color: #DADDDF;
-    }
+    background-color: mat.get-color-from-palette($background, level-08);
   }
 }
