@@ -5,10 +5,11 @@
   .main-margin {
     margin: 0 auto;
     height: fit-content;
+    width: fit-content;
 
     h1 {
       margin-top: 48px;
-      margin-left: 356px;
+      margin-left: 222px;
       margin-bottom: 32px;
       font-size: 64px;
     }
@@ -16,7 +17,7 @@
     h2 {
       font-size: 24px;
       margin-top: 0;
-      margin-left: 356px;
+      margin-left: 222px;
       margin-bottom: 48px;
     }
 
@@ -29,8 +30,8 @@
 
       .filters {
         height: fit-content;
-        min-width: 352px;
-        padding: 0 44px 0 100px;
+        width: 232px;
+        padding-top: 44px;
         align-items: center;
         overflow: hidden;
 
@@ -97,11 +98,10 @@
         height: fit-content;
         width: 100%;
         overflow: hidden;
-        padding-left: 20px;
+        padding-left: 32px;
 
         .o-grid {
           width: 100%;
-          margin-right: 100px;
 
           .mat-grid-tile {
             background-color: white;
