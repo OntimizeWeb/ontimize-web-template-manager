@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Injector, OnInit, QueryList, SimpleChange, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, Injector, OnDestroy, OnInit, QueryList, SimpleChange, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { Expression, FilterExpressionUtils, OCheckboxComponent, OGridComponent, OSearchInputComponent } from 'ontimize-web-ngx';
 import { DummyService } from '../../shared/services/dummy.service';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -10,9 +10,10 @@ import { MediaChange, MediaObserver } from '@angular/flex-layout';
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild('sidenav', { static: false }) private sidenav: MatSidenav;
   @ViewChild('grid', { static: false }) private grid: OGridComponent;
@@ -34,6 +35,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
     this.media = this.injector.get(MediaObserver);
+  }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
   ngAfterViewInit(): void {
     this.filterChangesEvents();
