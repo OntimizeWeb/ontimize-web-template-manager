@@ -43,6 +43,10 @@
     }
   }
 
+  .mat-grid-tile:hover {
+    border: 1px solid mat.get-color-from-palette($primary, 500);
+  }
+
   .content-container {
     .container-item {
       h4 {
