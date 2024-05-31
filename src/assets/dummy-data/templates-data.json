@@ -9,35 +9,65 @@
       "IMG": "template1.png",
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
-      "TYPE": 9
+      "TYPE": 9,
+      "IMAGES": [
+        "template1.png",
+        "template2.png",
+        "template3.png",
+        "template4.png"
+      ]
     },
     {
       "ID": 2,
       "IMG": "template2.png",
       "TITLE": "Simple grid example",
       "DESCRIPTION": "This is the template of a grid for your Ontimize applications.",
-      "TYPE": 2
+      "TYPE": 2,
+      "IMAGES": [
+        "template1.png",
+        "template2.png",
+        "template3.png",
+        "template4.png"
+      ]
     },
     {
       "ID": 3,
       "IMG": "template3.png",
       "TITLE": "Fixed grid example",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
-      "TYPE": 2
+      "TYPE": 2,
+      "IMAGES": [
+        "template1.png",
+        "template2.png",
+        "template3.png",
+        "template4.png"
+      ]
     },
     {
       "ID": 4,
       "IMG": "template4.png",
       "TITLE": "Custom grid template",
       "DESCRIPTION": "This is the template of a custom grid for your Ontimize applications.",
-      "TYPE": 2
+      "TYPE": 2,
+      "IMAGES": [
+        "template1.png",
+        "template2.png",
+        "template3.png",
+        "template4.png"
+      ]
     },
     {
       "ID": 5,
       "IMG": "template5.png",
       "TITLE": "Login page template",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
-      "TYPE": 9
+      "TYPE": 9,
+      "IMAGES": [
+        "template1.png",
+        "template2.png",
+        "template3.png",
+        "template4.png"
+      ]
     }
   ],
   "sqlTypes": {

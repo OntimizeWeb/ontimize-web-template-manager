@@ -13,10 +13,11 @@
         Github Link
       </div>
     </a>
+    <span>{{ galleryImages }}</span>
   </div>
   <div class="right-container">
     <div class="img-container">
-      <!--<o-gallery [gallery-images]="templateImg" [gallery-options]="galleryOptions"></o-gallery>-->
+      <o-gallery #gallery [gallery-images]="galleryImages" [gallery-options]="galleryOptions"></o-gallery>
     </div>
   </div>
 </div>

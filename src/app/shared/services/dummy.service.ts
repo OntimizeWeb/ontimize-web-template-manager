@@ -161,6 +161,9 @@ export class DummyService extends OntimizeEEService {
 
     const result = [];
     resp.data.forEach(element => {
+      if (filters.includes(element.ID)) {
+        result.push(element);
+      }
       if (filters.includes(element.TYPE)) {
         result.push(element);
       }
