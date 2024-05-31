@@ -1,0 +1,45 @@
+@use '@angular/material'as mat;
+
+@mixin main-theme($theme) {
+  $primary: map-get($theme, color, primary);
+  $is-dark: map-get($theme, color, is-dark);
+  $background: map-get($theme, color, background);
+  $foreground: map-get($theme, color, foreground);
+
+  .top-bar {
+    background-color: mat.get-color-from-palette($background, app-bar);
+    border-color: mat.get-color-from-palette($foreground, divider);
+
+    .doc-btn {
+      border-color: mat.get-color-from-palette($foreground, divider);
+      color: mat.get-color-from-palette($foreground, button);
+    }
+
+    @if $is-dark {
+
+      .github-img {
+        background-image: url('/assets/images/github_dark.png');
+      }
+
+      .toggle-theme {
+        background-image: url('/assets/images/toggle_dark.png');
+      }
+    }
+
+    @else {
+
+      .github-img {
+        background-image: url('/assets/images/github_light.png');
+      }
+
+      .toggle-theme {
+        background-image: url('/assets/images/toggle_light.png');
+      }
+    }
+
+  }
+
+  .main-container {
+    background-color: mat.get-color-from-palette($background, level-08);
+  }
+}

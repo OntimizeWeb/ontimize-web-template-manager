@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AppearanceService } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-main',
@@ -6,4 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
+
+  constructor(protected appeareanceService: AppearanceService) { }
+
+  toggleDarkMode() {
+    if (this.appeareanceService.isDarkMode()) {
+      this.appeareanceService.setDarkMode(false);
+    } else {
+      this.appeareanceService.setDarkMode(true);
+    }
+  }
 }
+
