@@ -3,21 +3,28 @@
   height: fit-content;
 
   .main-margin {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     height: fit-content;
+    max-width: 1456px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0 38px 38px;
 
-    h1 {
-      margin-top: 48px;
-      margin-left: 356px;
-      margin-bottom: 32px;
-      font-size: 64px;
-    }
+    .title-container {
+      padding-left: 264px;
 
-    h2 {
-      font-size: 24px;
-      margin-top: 0;
-      margin-left: 356px;
-      margin-bottom: 48px;
+      h1 {
+        margin-top: 48px;
+        margin-bottom: 32px;
+        font-size: 64px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 48px;
+      }
     }
 
     .home-container {
@@ -28,9 +35,9 @@
       overflow: hidden;
 
       .filters {
+        min-width: 234px;
         height: fit-content;
-        min-width: 352px;
-        padding: 0 44px 0 100px;
+        padding-top: 4px;
         align-items: center;
         overflow: hidden;
 
@@ -68,17 +75,18 @@
         }
 
         .search-filter.o-search-input {
-          width: 100%;
+          width: 232px;
           height: 40px;
           border-radius: 3px;
           border-color: transparent;
         }
 
         .collapsible.o-column-collapsible {
-          width: 100%;
+          width: fit-content;
           text-wrap: nowrap;
 
           .o-checkbox {
+            width: 232px;
             height: 40px;
             margin-bottom: 6px;
             border-style: solid;
@@ -97,11 +105,10 @@
         height: fit-content;
         width: 100%;
         overflow: hidden;
-        padding-left: 20px;
+        padding-left: 32px;
 
         .o-grid {
           width: 100%;
-          margin-right: 100px;
 
           .mat-grid-tile {
             background-color: white;

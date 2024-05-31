@@ -14,8 +14,11 @@
   border-right: 0;
   border-left: 0;
   position: fixed;
-  padding: 0 96px;
+  z-index: 1;
 
+  >img {
+    margin-left: 60px;
+  }
 
   .light-mode-container {
     display: flex;
