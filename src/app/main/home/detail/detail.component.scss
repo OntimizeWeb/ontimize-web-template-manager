@@ -1,59 +1,77 @@
-.top-container {
-  display: flex;
-  justify-content: flex-start;
-  padding: 40px 232px;
-}
+.main-scroll {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
 
-.bottom-container {
-  display: flex;
-  flex-direction: row;
-  padding: 40px 232px;
-
-  .left-container {
+  .top-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding: 40px 232px;
 
-    a {
-      text-decoration: none;
-
-      .github-btn {
-        display: flex;
-        height: 64px;
-        background-color: #1464A5;
-        color: white;
-        border-radius: 5px;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          margin-right: 10px;
-        }
-      }
+    .mdc-button {
+      border-style: none;
+      font-size: 20px;
     }
   }
 
-  .right-container {
+  .bottom-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
+    padding: 40px 232px;
+    justify-content: center;
+    column-gap: 40px;
+
+    .left-container {
+      display: flex;
+      flex-direction: column;
+
+      .text {
+        h1 {
+          font-size: 36px;
+          font-weight: 700;
+        }
+
+        h3 {
+          font-size: 22px;
+          font-weight: 400;
+        }
+      }
+
+      a {
+        text-decoration: none;
+
+        .github-btn {
+          display: flex;
+          height: 64px;
+          width: 400px;
+          border-radius: 5px;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
 
     .right-container {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 100%;
+      align-items: start;
+
+      .ellipsis {
+        margin-top: 120px;
+      }
+
+      .description {
+        margin-top: 100px;
+      }
 
       .img-container {
-        width: 700px;
-        height: 400px;
+        width: fit-content;
+        height: fit-content;
         margin-bottom: 20px;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
       }
     }
   }

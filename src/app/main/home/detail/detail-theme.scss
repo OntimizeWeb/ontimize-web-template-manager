@@ -11,17 +11,12 @@
 
   .top-container {
     button {
-      @if $is-dark {
-        color: #FFFFFF99;
-      }
-
-      @else {
-        color: #000000DE;
-      }
+      color: mat.get-color-from-palette($foreground, text);
     }
   }
 
   .right-container {
+
     .img-container {
       img {
         @if $is-dark {
@@ -39,12 +34,18 @@
 
     h1,
     h3 {
+      color: mat.get-color-from-palette($foreground, text);
+    }
+
+    .github-btn {
+      background-color: mat.get-color-from-palette($primary, 500);
+
       @if $is-dark {
-        color: #FFFFFFDE;
+        color: #000000DE;
       }
 
       @else {
-        color: #000000DE;
+        color: #FFFFFFDE;
       }
     }
   }

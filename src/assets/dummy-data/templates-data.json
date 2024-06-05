@@ -28,7 +28,8 @@
         "template2.png",
         "template3.png",
         "template4.png"
-      ]
+      ],
+      "BOTTOM_DESCRIPTION": "<h2>How to install</h2><br><p>First of all you need to do it is to download from Github the ZIP file. Once downloaded you need to add all the files on the same folder to your project and then compile and execute the application</p>"
     },
     {
       "ID": 3,

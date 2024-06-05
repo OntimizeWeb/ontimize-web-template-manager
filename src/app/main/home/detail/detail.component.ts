@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, Injector, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, Injector, OnInit, SecurityContext, ViewEncapsulation } from '@angular/core';
 import { DummyService } from '../../../shared/services/dummy.service';
 import { Router } from '@angular/router';
-import { OFormComponent } from 'ontimize-web-ngx';
 import { ImageService } from '../../../shared/services/image.service';
-import { GalleryComponent } from 'ontimize-web-ngx-gallery';
+import { GalleryImage } from 'ontimize-web-ngx-gallery';
+import { AppearanceService } from 'ontimize-web-ngx';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail',
@@ -17,6 +18,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
   protected templateTitle: string;
   protected templateDescription: string;
   protected templateImages = [];
+  protected templateBottomDescription: string;
   private service: DummyService;
   private imageService: ImageService;
   protected galleryOptions = [
@@ -28,18 +30,21 @@ export class DetailComponent implements OnInit, AfterViewInit {
       layout: "thumbnails-bottom"
     }
   ];
-  protected galleryImages = [];
-  protected gallerImages = [{}];
-  @ViewChild("gallery", { static: false }) gallery: GalleryComponent;
+  protected galleryImages: GalleryImage[];
+  protected dark;
+  protected detail;
 
   constructor(
     protected injector: Injector,
-    protected router: Router
+    protected router: Router,
+    protected appeareanceService: AppearanceService,
+    private sanitizer: DomSanitizer
   ) {
     this.templateId = window.location.href.split('/')[5];
     this.templateId = this.templateId.split('?')[0];
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
+    this.galleryImages = [];
   }
   ngAfterViewInit(): void {
 
@@ -48,12 +53,20 @@ export class DetailComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.configureService();
     this.queryTemplate();
+    this.appeareanceService.isDarkMode$.subscribe(dark => {
+      if (dark) {
+        this.dark = "-dark";
+      } else {
+        this.dark = "";
+      }
+    });
   }
 
   private loadGallery(templateImages) {
+    this.galleryImages = [];
     templateImages.forEach(img => {
-      this.galleryImages.push({"small": "'"+this.imageService.getImgUrl(img)+"'",
-        "medium":"'"+this.imageService.getImgUrl(img)+"'", "big": "'"+this.imageService.getImgUrl(img)+"'"});
+      this.galleryImages.push({"small": this.imageService.getImgUrl(img),
+        "medium": this.imageService.getImgUrl(img), "big": this.imageService.getImgUrl(img)});
     });
     console.log(this.galleryImages);
   }
@@ -67,13 +80,17 @@ export class DetailComponent implements OnInit, AfterViewInit {
     const filter = {
       "ID": +this.templateId
     };
-    const columns = ["IMG", "TITLE", "DESCRIPTION", "TYPE", "IMAGES"];
+    const columns = ["IMG", "TITLE", "DESCRIPTION", "TYPE", "IMAGES", "BOTTOM-DESCRIPTION"];
     this.service.query(filter, columns, 'template').subscribe((response) => {
       if (response.code === 0) {
         this.templateImg = response.data[0].IMG;
         this.templateTitle = response.data[0].TITLE;
         this.templateDescription = response.data[0].DESCRIPTION;
         this.loadGallery(response.data[0].IMAGES);
+        if (response.data[0].BOTTOM_DESCRIPTION != null) {
+          this.templateBottomDescription = response.data[0].BOTTOM_DESCRIPTION;
+          this.detail = true;
+        }
       }
     });
   }
