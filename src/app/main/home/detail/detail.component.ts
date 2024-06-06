@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ImageService } from '../../../shared/services/image.service';
 import { GalleryImage } from 'ontimize-web-ngx-gallery';
 import { AppearanceService } from 'ontimize-web-ngx';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail',
@@ -37,8 +36,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
   constructor(
     protected injector: Injector,
     protected router: Router,
-    protected appeareanceService: AppearanceService,
-    private sanitizer: DomSanitizer
+    protected appeareanceService: AppearanceService
   ) {
     this.templateId = window.location.href.split('/')[5];
     this.templateId = this.templateId.split('?')[0];
@@ -82,7 +80,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
     };
     const columns = ["IMG", "TITLE", "DESCRIPTION", "TYPE", "IMAGES", "BOTTOM-DESCRIPTION"];
     this.service.query(filter, columns, 'template').subscribe((response) => {
-      if (response.code === 0) {
+      if (response.code === 0 && Array.isArray(response.data)) {
         this.templateImg = response.data[0].IMG;
         this.templateTitle = response.data[0].TITLE;
         this.templateDescription = response.data[0].DESCRIPTION;
