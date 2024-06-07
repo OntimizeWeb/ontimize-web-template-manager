@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, Injector, OnInit, SecurityContext, ViewEncapsulation } from '@angular/core';
-import { DummyService } from '../../../shared/services/dummy.service';
+import { Component, Injector, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { ImageService } from '../../../shared/services/image.service';
-import { GalleryImage } from 'ontimize-web-ngx-gallery';
 import { AppearanceService } from 'ontimize-web-ngx';
+import { GalleryImage } from 'ontimize-web-ngx-gallery';
+
+import { DummyService } from '../../../shared/services/dummy.service';
+import { ImageService } from '../../../shared/services/image.service';
 
 @Component({
   selector: 'app-detail',
