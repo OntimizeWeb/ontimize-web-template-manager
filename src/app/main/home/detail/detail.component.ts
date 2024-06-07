@@ -11,7 +11,7 @@ import { AppearanceService } from 'ontimize-web-ngx';
   styleUrls: ['./detail.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DetailComponent implements OnInit, AfterViewInit {
+export class DetailComponent implements OnInit {
   protected templateId: string;
   protected templateImg: string;
   protected templateTitle: string;
@@ -22,11 +22,9 @@ export class DetailComponent implements OnInit, AfterViewInit {
   private imageService: ImageService;
   protected galleryOptions = [
     {
-      height: "670px",
-      width: "936px",
+      width: '100%',
       thumbnailsColumns: 3,
-      thumbnailsRows: 1,
-      layout: "thumbnails-bottom"
+      aspectRatio: "4:3"
     }
   ];
   protected galleryImages: GalleryImage[];
@@ -44,9 +42,7 @@ export class DetailComponent implements OnInit, AfterViewInit {
     this.imageService = this.injector.get(ImageService);
     this.galleryImages = [];
   }
-  ngAfterViewInit(): void {
 
-  }
 
   ngOnInit(): void {
     this.configureService();
@@ -63,8 +59,10 @@ export class DetailComponent implements OnInit, AfterViewInit {
   private loadGallery(templateImages) {
     this.galleryImages = [];
     templateImages.forEach(img => {
-      this.galleryImages.push({"small": this.imageService.getImgUrl(img),
-        "medium": this.imageService.getImgUrl(img), "big": this.imageService.getImgUrl(img)});
+      this.galleryImages.push({
+        "small": this.imageService.getImgUrl(img),
+        "medium": this.imageService.getImgUrl(img), "big": this.imageService.getImgUrl(img)
+      });
     });
     console.log(this.galleryImages);
   }
