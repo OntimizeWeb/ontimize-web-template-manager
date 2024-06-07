@@ -14,7 +14,6 @@
       <o-gallery #gallery [gallery-images]="galleryImages" [gallery-options]="galleryOptions"></o-gallery>
     </div>
     <div *ngIf="detail" fxLayoutAlign="row" fxLayoutGap="40px">
-      <img src="assets/images/ellipse{{dark}}.svg" alt="ellipse" width="32px" height="32px" class="ellipsis">
       <div [innerHTML]="templateBottomDescription" class="description"></div>
     </div>
   </div>
