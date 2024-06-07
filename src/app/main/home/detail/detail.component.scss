@@ -47,6 +47,14 @@
 
         .mdc-button__label {
           font-size: 24px;
+          padding-top: 4px;
+
+          .mat-icon {
+            width: 41px;
+            height: 41px;
+            margin-right: 12px;
+            margin-bottom: 4px;
+          }
         }
       }
     }
