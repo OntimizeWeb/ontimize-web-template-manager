@@ -1,4 +1,4 @@
-<o-form #form editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
+<o-form #form service="templates" service-type="DummyService" editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
   <div class="main-overflow">
     <div class="main-margin">
       <div class="title-container">
@@ -34,8 +34,8 @@
         </div>
         <div class="content-container">
           <div fxLayout="row" layout-padding fxLayoutAlign="center center">
-            <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service="templates" entity="template" show-footer="no" refresh-button="no"
-              quick-filter="no" grid-item-height="300px" gutter-size="44px" service-type="DummyService" [controls]="false" [cols]="columns" fxFlex>
+            <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service-type="DummyService" service="templates" entity="template" show-footer="no" refresh-button="no"
+              quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" fxFlex>
               <o-grid-item *ngFor="let grd of grid.dataArray">
                 <div layout-padding class="container-item" layout-align="center">
                   <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">

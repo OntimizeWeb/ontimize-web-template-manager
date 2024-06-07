@@ -65,7 +65,6 @@ export class DetailComponent implements OnInit {
         "medium": this.imageService.getImgUrl(img), "big": this.imageService.getImgUrl(img)
       });
     });
-    console.log(this.galleryImages);
   }
 
   private configureService() {
