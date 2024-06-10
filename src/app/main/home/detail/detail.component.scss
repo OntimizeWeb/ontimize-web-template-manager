@@ -1,4 +1,6 @@
 .top-container {
+  display: flex;
+  justify-content: flex-start;
   padding: 40px 232px 0;
 
   .mdc-button {
