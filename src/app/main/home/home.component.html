@@ -1,13 +1,13 @@
 <o-form #form service="templates" service-type="DummyService" editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
   <div class="main-overflow">
-    <div class="main-margin">
+    <div class="main-margin" fxLayout="column">
       <div class="title-container">
         <h1>FIND YOUR TEMPLATE</h1>
         <h2>Begin the developing process with Ontimize prebuilding solutions and our library.</h2>
       </div>
-      <div class="home-container">
+      <div class="home-container" fxLayout="row">
         <div fxLayout="column" fxLayoutGap="18px" class="filters">
-          <div fxLayout="row" class="top-filter">
+          <div fxLayout="row" class="top-filter" fxLayoutAlign="flex-start space-between">
             <p>Filter templates</p>
             <div fxLayoutAlign="center center" (click)="clearSelection()" class="clear-btn" [ngClass]="{'hide-btn' : hideBtn}">
               <span class="material-symbols-outlined">
@@ -32,7 +32,7 @@
             filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN" [target]="grid"
             query-on-change="yes" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
         </div>
-        <div class="content-container">
+        <div class="content-container" fxLayout="column">
           <div fxLayout="row" layout-padding fxLayoutAlign="center center">
             <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service-type="DummyService" service="templates" entity="template" show-footer="no" refresh-button="no"
               quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" fxFlex>

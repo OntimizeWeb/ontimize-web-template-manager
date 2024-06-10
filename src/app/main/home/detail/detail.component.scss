@@ -1,6 +1,4 @@
 .top-container {
-  display: flex;
-  justify-content: flex-start;
   padding: 40px 232px 0;
 
   .mdc-button {
@@ -10,19 +8,11 @@
 }
 
 .bottom-container {
-  display: flex;
-  flex-direction: row;
   padding: 40px 232px;
-  justify-content: space-between;
-  column-gap: 40px;
   height: 100%;
 
   .left-container {
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
-    min-width: 400px;
-    max-width: 400px;
 
     .text {
       h1 {
@@ -38,7 +28,7 @@
     }
 
     .github-btn {
-      width: 400px;
+      width: 100%;
       border-radius: 4px;
 
       .mat-mdc-button-base {
@@ -62,21 +52,21 @@
   }
 
   .right-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     overflow: auto;
-    height: calc(100% - 112px);
     width: 100%;
+    height: calc(100vh - 192px);
+
 
     .description {
       margin-top: 50px;
-    }
 
-    .img-container {
-      width: fit-content;
-      height: fit-content;
-      margin-bottom: 20px;
+      >.ellipsis {
+        margin-right: 40px;
+      }
+
+      >p {
+        padding-left: 72px;
+      }
     }
   }
 }

@@ -1,18 +1,21 @@
-<div class="top-container">
-  <o-button attr="back-btn" label="&#8592; Go back" (click)="openHome()"></o-button>
-</div>
-<div class="bottom-container">
-  <div class="left-container">
-    <div class="text">
-      <h1>{{ templateTitle }}</h1>
-      <h3>{{ templateDescription }}</h3>
-    </div>
-    <o-button attr="github-btn" type="flat" color="primary" class="github-btn" svg-icon="ontimize:github-btn{{dark}}" label="Github Link"></o-button>
+<div fxLayout="column">
+  <div class="top-container" fxLayoutAlign="flex-start">
+    <o-button attr="back-btn" label="&#8592; Go back" (click)="openHome()"></o-button>
   </div>
-  <div class="right-container">
+  <div class="bottom-container" fxLayoutGap="40px" fxLayout="row" fxLayoutAlign="space-between">
+    <div class="left-container" fxLayout="column">
+      <div class="text">
+        <h1>{{ templateTitle }}</h1>
+        <h3>{{ templateDescription }}</h3>
+      </div>
+      <o-button attr="github-btn" type="flat" color="primary" class="github-btn" svg-icon="ontimize:github-btn{{dark}}"
+        label="Github Link"></o-button>
+    </div>
+    <div class="right-container" fxLayout="column" fxLayoutAlign="flex-start">
       <o-gallery #gallery *ngIf="galleryImages.length>0" [gallery-images]="galleryImages" [gallery-options]="galleryOptions"></o-gallery>
-    <div *ngIf="detail" fxLayoutAlign="row" fxLayoutGap="40px">
-      <div [innerHTML]="templateBottomDescription" class="description"></div>
+      <div *ngIf="detail" fxLayoutAlign="column" fxLayoutGap="40px">
+        <div [innerHTML]="templateBottomDescription" class="description"></div>
+      </div>
     </div>
   </div>
 </div>
