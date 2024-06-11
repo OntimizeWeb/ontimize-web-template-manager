@@ -1,73 +1,69 @@
-.main-overflow {
-  overflow: auto;
-  height: 100%;
+.top-container {
+  padding: 40px 232px 0;
 
-  .top-container {
-    padding: 40px 232px 0;
-
-    .mdc-button {
-      border-style: none;
-      font-size: 20px;
-    }
+  .mdc-button {
+    border-style: none;
+    font-size: 20px;
   }
+}
 
-  .bottom-container {
-    padding: 40px 232px;
+.bottom-container {
+  padding: 40px 0 40px 232px;
 
-    .left-container {
-      overflow: hidden;
+  .left-container {
+    overflow: hidden;
 
-      .text {
-        h1 {
-          font-size: 36px;
-          font-weight: 700;
-          margin-top: 0;
-        }
-
-        h3 {
-          font-size: 22px;
-          font-weight: 400;
-        }
+    .text {
+      h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 0;
       }
 
-      .github-btn {
-        width: 100%;
+      h3 {
+        font-size: 22px;
+        font-weight: 400;
+      }
+    }
+
+    .github-btn {
+      width: 100%;
+      border-radius: 4px;
+
+      .mat-mdc-button-base {
+        height: 64px;
         border-radius: 4px;
 
-        .mat-mdc-button-base {
-          height: 64px;
-          border-radius: 4px;
+        .mdc-button__label {
+          font-size: 24px;
+          padding-top: 4px;
 
-          .mdc-button__label {
-            font-size: 24px;
-            padding-top: 4px;
-
-            .mat-icon {
-              width: 41px;
-              height: 41px;
-              margin-right: 12px;
-              margin-bottom: 4px;
-            }
+          .mat-icon {
+            width: 41px;
+            height: 41px;
+            margin-right: 12px;
+            margin-bottom: 4px;
           }
         }
       }
     }
+  }
 
-    .right-container {
-      overflow: hidden;
-      width: 100%;
+  .right-container {
+    overflow: auto;
+    width: 100%;
+    height: calc(100vh - 192px);
+    padding-right: 232px;
 
+    .description {
+      margin-top: 50px;
 
-      .description {
-        margin-top: 50px;
+      >.ellipsis {
+        margin-right: 40px;
+      }
 
-        >.ellipsis {
-          margin-right: 40px;
-        }
-
-        >p {
-          padding-left: 72px;
-        }
+      >p {
+        padding-left: 72px;
       }
     }
   }
