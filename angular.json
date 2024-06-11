@@ -13,6 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "google-libphonenumber",
+              "moment"
+            ],
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -39,9 +43,6 @@
               ]
             },
             "scripts": [
-            ],
-            "allowedCommonJsDependencies": [
-
             ]
           },
           "configurations": {
