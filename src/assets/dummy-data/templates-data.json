@@ -6,24 +6,21 @@
   "data": [
     {
       "ID": 1,
-      "IMG": "template1.png",
+      "IMG": "login02/login02_01.png",
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9,
-      "IMAGES": [{
-          "small": "template1.png",
-          "medium": "template1.png",
-          "big": "template1.png"
+      "IMAGES": [
+        {
+          "small": "login02/login02_thumbnail_01.png",
+          "big": "login02/login02_01.png"
         },
         {
-          "small": "template2.png",
-          "big": "template2.png"
-        },
-        {
-          "small": "template3.png",
-          "big": "template3.png"
+          "small": "login02/login02_thumbnail_02.png",
+          "big": "login02/login02_02.png"
         }
       ]
+
     },
     {
       "ID": 2,
@@ -34,7 +31,6 @@
       "IMAGES": [
         {
           "small": "template1.png",
-          "medium": "template1.png",
           "big": "template1.png"
         },
         {
@@ -57,7 +53,6 @@
       "IMAGES": [
         {
           "small": "template1.png",
-          "medium": "template1.png",
           "big": "template1.png"
         },
         {
@@ -76,20 +71,19 @@
       "TITLE": "Custom grid template",
       "DESCRIPTION": "This is the template of a custom grid for your Ontimize applications.",
       "TYPE": 2,
-      "IMAGES":[
-       {
-        "small": "template1.png",
-        "medium": "template1.png",
-        "big": "template1.png"
-      },
-      {
-        "small": "template2.png",
-        "big": "template2.png"
-      },
-      {
-        "small": "template3.png",
-        "big": "template3.png"
-      }
+      "IMAGES": [
+        {
+          "small": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
       ]
     },
     {
@@ -101,7 +95,6 @@
       "IMAGES": [
         {
           "small": "template1.png",
-          "medium": "template1.png",
           "big": "template1.png"
         },
         {
