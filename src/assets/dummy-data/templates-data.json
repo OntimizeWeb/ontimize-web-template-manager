@@ -10,11 +10,19 @@
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9,
-      "IMAGES": [
-        "template1.png",
-        "template2.png",
-        "template3.png",
-        "template4.png"
+      "IMAGES": [{
+          "small": "template1.png",
+          "medium": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
       ]
     },
     {
@@ -24,10 +32,19 @@
       "DESCRIPTION": "This is the template of a grid for your Ontimize applications.",
       "TYPE": 2,
       "IMAGES": [
-        "template1.png",
-        "template2.png",
-        "template3.png",
-        "template4.png"
+        {
+          "small": "template1.png",
+          "medium": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
       ],
       "BOTTOM_DESCRIPTION": "<div class='ellipsis'></div><h2>How to install</h2><br><p>First of all you need to do it is to download from Github the ZIP file. Once downloaded you need to add all the files on the same folder to your project and then compile and execute the application.</p>"
     },
@@ -38,10 +55,19 @@
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 2,
       "IMAGES": [
-        "template1.png",
-        "template2.png",
-        "template3.png",
-        "template4.png"
+        {
+          "small": "template1.png",
+          "medium": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
       ]
     },
     {
@@ -50,11 +76,20 @@
       "TITLE": "Custom grid template",
       "DESCRIPTION": "This is the template of a custom grid for your Ontimize applications.",
       "TYPE": 2,
-      "IMAGES": [
-        "template1.png",
-        "template2.png",
-        "template3.png",
-        "template4.png"
+      "IMAGES":[
+       {
+        "small": "template1.png",
+        "medium": "template1.png",
+        "big": "template1.png"
+      },
+      {
+        "small": "template2.png",
+        "big": "template2.png"
+      },
+      {
+        "small": "template3.png",
+        "big": "template3.png"
+      }
       ]
     },
     {
@@ -64,10 +99,19 @@
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9,
       "IMAGES": [
-        "template1.png",
-        "template2.png",
-        "template3.png",
-        "template4.png"
+        {
+          "small": "template1.png",
+          "medium": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
       ]
     }
   ],

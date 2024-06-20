@@ -61,8 +61,9 @@ export class DetailComponent implements OnInit {
     this.galleryImages = [];
     templateImages.forEach(img => {
       this.galleryImages.push({
-        "small": this.imageService.getImgUrl(img),
-        "medium": this.imageService.getImgUrl(img), "big": this.imageService.getImgUrl(img)
+        "small": this.imageService.getImgUrl(img.small),
+        "medium": this.imageService.getImgUrl(img.big),
+        "big": this.imageService.getImgUrl(img.big)
       });
     });
   }
