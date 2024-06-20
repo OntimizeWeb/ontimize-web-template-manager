@@ -83,7 +83,6 @@ export class DetailComponent implements OnInit {
         this.templateImg = response.data[0].IMG;
         this.templateTitle = response.data[0].TITLE;
         this.templateDescription = response.data[0].DESCRIPTION;
-        this.galleryImages = response.data[0].IMAGES;
         this.loadGallery(response.data[0].IMAGES);
         if (response.data[0].BOTTOM_DESCRIPTION != null) {
           this.templateBottomDescription = response.data[0].BOTTOM_DESCRIPTION;
