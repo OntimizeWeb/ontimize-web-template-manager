@@ -161,13 +161,13 @@ export class DummyService extends OntimizeEEService {
 
     const result = [];
     resp.data.forEach(element => {
-      if (filters.includes(element.ID)) {
+      if (filters.includes(element.ID) && kv["ID"]) {
         result.push(element);
       }
-      if (filters.includes(element.TYPE)) {
+      else if (filters.includes(element.TYPE) && kv["@basic_expression"]["lop"] == "TYPE" || filters.includes(element.TYPE) && kv["@basic_expression"]["rop"]["lop"] == "TYPE") {
         result.push(element);
       }
-      if (Array.isArray(filters[0])) {
+      else if (Array.isArray(filters[0])) {
         if (filters[0].indexOf(element.TYPE) != -1) {
           result.push(element);
         }
