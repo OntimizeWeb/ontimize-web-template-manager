@@ -61,8 +61,9 @@ export class DetailComponent implements OnInit {
     this.galleryImages = [];
     templateImages.forEach(img => {
       this.galleryImages.push({
-        "small": this.imageService.getImgUrl(img),
-        "medium": this.imageService.getImgUrl(img), "big": this.imageService.getImgUrl(img)
+        "small": this.imageService.getImgUrl(img.small),
+        "medium": this.imageService.getImgUrl(img.big),
+        "big": this.imageService.getImgUrl(img.big)
       });
     });
   }
@@ -82,6 +83,7 @@ export class DetailComponent implements OnInit {
         this.templateImg = response.data[0].IMG;
         this.templateTitle = response.data[0].TITLE;
         this.templateDescription = response.data[0].DESCRIPTION;
+        this.galleryImages = response.data[0].IMAGES;
         this.loadGallery(response.data[0].IMAGES);
         if (response.data[0].BOTTOM_DESCRIPTION != null) {
           this.templateBottomDescription = response.data[0].BOTTOM_DESCRIPTION;
