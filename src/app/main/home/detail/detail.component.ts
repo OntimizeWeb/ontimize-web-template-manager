@@ -1,6 +1,6 @@
 import { Component, Injector, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppearanceService } from 'ontimize-web-ngx';
+import { AppearanceService, Util } from 'ontimize-web-ngx';
 import { GalleryImage } from 'ontimize-web-ngx-gallery';
 
 import { DummyService } from '../../../shared/services/dummy.service';
@@ -18,6 +18,7 @@ export class DetailComponent implements OnInit {
   protected templateTitle: string;
   protected templateDescription: string;
   protected templateImages = [];
+  public githubURLTemplate: string;
   protected templateBottomDescription: string;
   private service: DummyService;
   private imageService: ImageService;
@@ -31,6 +32,8 @@ export class DetailComponent implements OnInit {
   protected galleryImages: GalleryImage[];
   protected dark;
   protected detail;
+  templateURLReadme: string;
+  teplateURLGithub: string;
 
   constructor(
     protected injector: Injector,
@@ -77,12 +80,16 @@ export class DetailComponent implements OnInit {
     const filter = {
       "ID": +this.templateId
     };
-    const columns = ["IMG", "TITLE", "DESCRIPTION", "TYPE", "IMAGES", "BOTTOM-DESCRIPTION"];
+    const columns = ["IMG", "TITLE", "DESCRIPTION", "TYPE", "IMAGES", "BOTTOM-DESCRIPTION", "URLGITHUB"];
     this.service.query(filter, columns, 'template').subscribe((response) => {
       if (response.code === 0 && Array.isArray(response.data)) {
         this.templateImg = response.data[0].IMG;
         this.templateTitle = response.data[0].TITLE;
         this.templateDescription = response.data[0].DESCRIPTION;
+        if (Util.isDefined(response.data[0].URLGITHUB)) {
+          this.templateURLReadme = '/ontimize-web-templates/develop/templates/' + response.data[0].URLGITHUB + '/README.md';
+          this.teplateURLGithub = 'https://github.com/OntimizeWeb/ontimize-web-templates/blob/develop/templates/' + response.data[0].URLGITHUB ;
+        }
         this.loadGallery(response.data[0].IMAGES);
         if (response.data[0].BOTTOM_DESCRIPTION != null) {
           this.templateBottomDescription = response.data[0].BOTTOM_DESCRIPTION;
@@ -92,6 +99,11 @@ export class DetailComponent implements OnInit {
     });
   }
 
+  public openRepository() {
+    if (Util.isDefined(this.teplateURLGithub)) {
+      window.open(this.teplateURLGithub, "_blank");
+    }
+  }
   public openHome() {
     this.router.navigate(['main/templates']);
   }
