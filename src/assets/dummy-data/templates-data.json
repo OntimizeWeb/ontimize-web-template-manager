@@ -7,21 +7,21 @@
     {
       "ID": 1,
       "IMG": "template1.png",
+      "URLGITHUB":"login/02-login",
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9,
-      "IMAGES": [{
-          "small": "template1.png",
-          "medium": "template1.png",
-          "big": "template1.png"
+      "README": "login/login02/README.md",
+      "IMAGES": [
+        {
+          "small": "login/login02/login02_thumbnail_01.png",
+          "medium": "login/login02/login02_01.png",
+          "big": "login/login02/login02_01.png"
         },
         {
-          "small": "template2.png",
-          "big": "template2.png"
-        },
-        {
-          "small": "template3.png",
-          "big": "template3.png"
+          "small": "login/login02/login02_thumbnail_02.png",
+          "medium": "login/02/login02_02.png",
+          "big": "login/login02/login02_02.png"
         }
       ]
     },
@@ -46,6 +46,7 @@
           "big": "template3.png"
         }
       ],
+
       "BOTTOM_DESCRIPTION": "<div class='ellipsis'></div><h2>How to install</h2><br><p>First of all you need to do it is to download from Github the ZIP file. Once downloaded you need to add all the files on the same folder to your project and then compile and execute the application.</p>"
     },
     {
