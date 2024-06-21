@@ -18,7 +18,6 @@ export class DetailComponent implements OnInit {
   protected templateTitle: string;
   protected templateDescription: string;
   protected templateImages = [];
-  public githubURLTemplate: string;
   protected templateBottomDescription: string;
   private service: DummyService;
   private imageService: ImageService;
