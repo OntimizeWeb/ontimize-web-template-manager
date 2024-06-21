@@ -7,23 +7,21 @@
     {
       "ID": 1,
       "IMG": "template1.png",
-      "URLGITHUB":"login/02-login",
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9,
-      "README": "login/login02/README.md",
       "IMAGES": [
         {
           "small": "login/login02/login02_thumbnail_01.png",
-          "medium": "login/login02/login02_01.png",
           "big": "login/login02/login02_01.png"
         },
         {
           "small": "login/login02/login02_thumbnail_02.png",
-          "medium": "login/02/login02_02.png",
           "big": "login/login02/login02_02.png"
         }
-      ]
+      ],
+      "README": "login/login02/README.md",
+      "URLGITHUB": "login/02-login"
     },
     {
       "ID": 2,
