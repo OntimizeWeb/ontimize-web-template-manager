@@ -6,7 +6,7 @@
   "data": [
     {
       "ID": 1,
-      "IMG": "template1.png",
+      "IMG": "login/login02/login02_thumbnail_01.png",
       "TITLE": "Simple login page",
       "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
       "TYPE": 9,
