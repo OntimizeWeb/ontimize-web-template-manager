@@ -5,12 +5,14 @@ import { GalleryImage } from 'ontimize-web-ngx-gallery';
 
 import { DummyService } from '../../../shared/services/dummy.service';
 import { ImageService } from '../../../shared/services/image.service';
+import { GithubService } from '../../../shared/services/github.service';
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [GithubService]
 })
 export class DetailComponent implements OnInit {
   protected templateId: string;
@@ -21,6 +23,8 @@ export class DetailComponent implements OnInit {
   protected templateBottomDescription: string;
   private service: DummyService;
   private imageService: ImageService;
+  private appeareanceService: AppearanceService;
+  private githubService: GithubService;
   protected galleryOptions = [
     {
       width: '100%',
@@ -30,19 +34,19 @@ export class DetailComponent implements OnInit {
   ];
   protected galleryImages: GalleryImage[];
   protected dark;
-  protected detail;
   templateURLReadme: string;
-  teplateURLGithub: string;
+  templateURLGithub: string;
 
   constructor(
     protected injector: Injector,
-    protected router: Router,
-    protected appeareanceService: AppearanceService
+    protected router: Router
   ) {
     this.templateId = window.location.href.split('/')[5];
     this.templateId = this.templateId.split('?')[0];
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
+    this.appeareanceService = this.injector.get(AppearanceService);
+    this.githubService = this.injector.get(GithubService);
     this.galleryImages = [];
   }
 
@@ -82,25 +86,27 @@ export class DetailComponent implements OnInit {
     const columns = ["IMG", "TITLE", "DESCRIPTION", "TYPE", "IMAGES", "BOTTOM-DESCRIPTION", "URLGITHUB"];
     this.service.query(filter, columns, 'template').subscribe((response) => {
       if (response.code === 0 && Array.isArray(response.data)) {
-        this.templateImg = response.data[0].IMG;
-        this.templateTitle = response.data[0].TITLE;
-        this.templateDescription = response.data[0].DESCRIPTION;
-        if (Util.isDefined(response.data[0].URLGITHUB)) {
-          this.templateURLReadme = '/ontimize-web-templates/develop/templates/' + response.data[0].URLGITHUB + '/README.md';
-          this.teplateURLGithub = 'https://github.com/OntimizeWeb/ontimize-web-templates/blob/develop/templates/' + response.data[0].URLGITHUB ;
-        }
-        this.loadGallery(response.data[0].IMAGES);
-        if (response.data[0].BOTTOM_DESCRIPTION != null) {
-          this.templateBottomDescription = response.data[0].BOTTOM_DESCRIPTION;
-          this.detail = true;
+        const currentData = response.data[0]
+        if (Util.isDefined(currentData)) {
+          this.templateImg = currentData.IMG;
+          this.templateTitle = currentData.TITLE;
+          this.templateDescription = currentData.DESCRIPTION;
+          if (Util.isDefined(currentData.URLGITHUB)) {
+            this.templateURLReadme = this.githubService.getGithubUrlReadme(currentData.URLGITHUB);
+            this.templateURLGithub = this.githubService.getGithubUrl(currentData.URLGITHUB);
+          }
+          this.loadGallery(currentData.IMAGES);
+          if (currentData.BOTTOM_DESCRIPTION != null) {
+            this.templateBottomDescription = currentData.BOTTOM_DESCRIPTION;
+          }
         }
       }
     });
   }
 
   public openRepository() {
-    if (Util.isDefined(this.teplateURLGithub)) {
-      window.open(this.teplateURLGithub, "_blank");
+    if (Util.isDefined(this.templateURLGithub)) {
+      window.open(this.templateURLGithub, "_blank");
     }
   }
   public openHome() {
