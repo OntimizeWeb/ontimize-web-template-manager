@@ -8,13 +8,16 @@ import { DummyService } from '../../shared/services/dummy.service';
 import { DetailComponent } from './detail/detail.component';
 import { ImageService } from '../../shared/services/image.service';
 import { OGalleryModule } from 'ontimize-web-ngx-gallery';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   imports: [
+    MarkdownModule.forChild(),
     SharedModule,
     OntimizeWebModule,
     HomeRoutingModule,
-    OGalleryModule
+    OGalleryModule,
+
   ],
   declarations: [
     HomeComponent,

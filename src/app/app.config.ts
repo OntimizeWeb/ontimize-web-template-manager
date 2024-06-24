@@ -5,14 +5,11 @@ import { SERVICE_CONFIG } from './shared/app.services.config';
 
 export const CONFIG: Config = {
   // The base path of the URL used by app services.
-  apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/qsallcomponents-jee/services/rest',
-  bundle: {
-    path: 'bundle'
-  },
+
   // Application identifier. Is the unique package identifier of the app.
   // It is used when storing or managing temporal data related with the app.
   // By default is set as 'ontimize-web-uuid'.
-  uuid: 'com.ontimize.web.ngx.jee.seed15x',
+  uuid: 'com.ontimize.web.template.manager',
 
   // Title of the app
   title: 'Template manager',
@@ -29,9 +26,5 @@ export const CONFIG: Config = {
 
   appMenuConfiguration: MENU_CONFIG,
 
-  applicationLocales: ['es', 'en'],
 
-  exportConfiguration: {
-    path: '/export'
-  }
 };

@@ -58,6 +58,16 @@
     .description {
       margin-top: 50px;
 
+      h1,
+      h2 {
+        &::before {
+          font-family: 'Material Icons',sans-serif;
+          content: "\e836";
+          font-size: 24px;
+          margin-right: 20px
+        }
+      }
+
       >.ellipsis {
         margin-right: 40px;
       }
