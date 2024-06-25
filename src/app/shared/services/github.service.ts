@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class GithubService {
+  gitUrl: string;
+  urlReadme: string;
 
-  constructor() { }
+  constructor() {
+    this.gitUrl = environment.githubUrl;
+    this.urlReadme = environment.urlReadme;
+  }
   /**
    *Gets remote github  the readme url with proxy configuration
    * @param subdirectory
    * @returns github url readme
    */
   getGithubUrlReadme(subdirectory: string): string {
-    return '/ontimize-web-templates/develop/templates/' + subdirectory + '/README.md';
+    return this.urlReadme + subdirectory + '/README.md';
   }
 
   /**
@@ -19,7 +25,7 @@ export class GithubService {
    * @returns github url for the template
    */
   getGithubUrl(subdirectory: string): string {
-    return 'https://github.com/OntimizeWeb/ontimize-web-templates/blob/develop/templates/' + subdirectory;
+    return this.gitUrl + subdirectory;
 
   }
 }
