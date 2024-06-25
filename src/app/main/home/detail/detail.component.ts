@@ -1,5 +1,5 @@
 import { Component, Injector, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppearanceService, Util } from 'ontimize-web-ngx';
 import { GalleryImage } from 'ontimize-web-ngx-gallery';
 
@@ -39,10 +39,10 @@ export class DetailComponent implements OnInit {
 
   constructor(
     protected injector: Injector,
-    protected router: Router
+    protected router: Router,
+    protected actRoute: ActivatedRoute
   ) {
-    this.templateId = window.location.href.split('/')[5];
-    this.templateId = this.templateId.split('?')[0];
+    this.getTemplateID();
     this.service = this.injector.get(DummyService);
     this.imageService = this.injector.get(ImageService);
     this.appeareanceService = this.injector.get(AppearanceService);
@@ -60,6 +60,15 @@ export class DetailComponent implements OnInit {
       } else {
         this.dark = "";
       }
+    });
+  }
+  public getTemplateID() {
+    this.actRoute.params.subscribe(params => {
+      Object.keys(params).forEach(key => {
+        if (key === 'ID') {
+          this.templateId = params[key];
+        }
+      });
     });
   }
 
