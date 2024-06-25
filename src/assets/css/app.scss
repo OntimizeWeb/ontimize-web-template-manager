@@ -5,6 +5,9 @@
 // Include ontimize styles
 @include ontimize-style.ontimize-theme-styles(theme.$theme);
 
+@import 'ontimize-web-ngx-gallery/o-gallery-theme.scss';
+@include o-gallery-theme(theme.$theme);
+
 @import '../../app/main/main-theme.scss';
 @include main-theme(theme.$theme);
 
@@ -20,4 +23,5 @@
   @include main-theme(theme.$dark-theme);
   @include home-theme(theme.$dark-theme);
   @include detail-theme(theme.$dark-theme);
+  @include o-gallery-theme(theme.$theme);
 }
