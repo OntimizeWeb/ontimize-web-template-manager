@@ -23,5 +23,4 @@
   @include main-theme(theme.$dark-theme);
   @include home-theme(theme.$dark-theme);
   @include detail-theme(theme.$dark-theme);
-  @include o-gallery-theme(theme.$theme);
 }
