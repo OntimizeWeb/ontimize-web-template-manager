@@ -6,6 +6,7 @@
   "data": [
     {
       "ID": 1,
+<<<<<<< feature/add-two-login-pages
       "IMG": "login04_thumbail_01.png",
       "TITLE": "Geometric login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window.",
@@ -25,6 +26,98 @@
       "IMG": "login06_thumbail_01.png",
       "TITLE": "Abstract login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window. The predominant color is the blue.",
+=======
+      "IMG": "login/login02/login02_thumbnail_01.png",
+      "TITLE": "Simple login page",
+      "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login02/login02_thumbnail_01.png",
+          "big": "login/login02/login02_01.png"
+        },
+        {
+          "small": "login/login02/login02_thumbnail_02.png",
+          "big": "login/login02/login02_02.png"
+        }
+      ],
+      "README": "login/login02/README.md",
+      "URLGITHUB": "login/02-login"
+    },
+    {
+      "ID": 2,
+      "IMG": "template2.png",
+      "TITLE": "Simple grid example",
+      "DESCRIPTION": "This is the template of a grid for your Ontimize applications.",
+      "TYPE": 2,
+      "IMAGES": [
+        {
+          "small": "template1.png",
+          "medium": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
+      ],
+
+      "BOTTOM_DESCRIPTION": "<div class='ellipsis'></div><h2>How to install</h2><br><p>First of all you need to do it is to download from Github the ZIP file. Once downloaded you need to add all the files on the same folder to your project and then compile and execute the application.</p>"
+    },
+    {
+      "ID": 3,
+      "IMG": "template3.png",
+      "TITLE": "Fixed grid example",
+      "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
+      "TYPE": 2,
+      "IMAGES": [
+        {
+          "small": "template1.png",
+          "medium": "template1.png",
+          "big": "template1.png"
+        },
+        {
+          "small": "template2.png",
+          "big": "template2.png"
+        },
+        {
+          "small": "template3.png",
+          "big": "template3.png"
+        }
+      ]
+    },
+    {
+      "ID": 4,
+      "IMG": "template4.png",
+      "TITLE": "Custom grid template",
+      "DESCRIPTION": "This is the template of a custom grid for your Ontimize applications.",
+      "TYPE": 2,
+      "IMAGES":[
+       {
+        "small": "template1.png",
+        "medium": "template1.png",
+        "big": "template1.png"
+      },
+      {
+        "small": "template2.png",
+        "big": "template2.png"
+      },
+      {
+        "small": "template3.png",
+        "big": "template3.png"
+      }
+      ]
+    },
+    {
+      "ID": 5,
+      "IMG": "template5.png",
+      "TITLE": "Login page template",
+      "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
+>>>>>>> develop
       "TYPE": 9,
       "IMAGES": [{
           "small": "login06_01.png",

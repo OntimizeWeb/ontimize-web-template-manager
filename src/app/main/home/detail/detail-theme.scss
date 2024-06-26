@@ -44,8 +44,16 @@
 
     .description {
       color: mat.get-color-from-palette($foreground, text);
+
+      h1,
+      h2 {
+        &::before {
+          color: mat.get-color-from-palette($primary, 500);
+        }
+      }
     }
   }
+
 
   .left-container {
 

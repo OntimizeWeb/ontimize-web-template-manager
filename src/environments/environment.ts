@@ -3,5 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  githubUrl: 'https://github.com/OntimizeWeb/ontimize-web-templates/blob/develop/templates/',
+  urlReadme: '/ontimize-web-templates/develop/templates/'
 };

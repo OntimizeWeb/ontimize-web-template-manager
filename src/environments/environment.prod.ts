@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  githubUrl: 'https://github.com/OntimizeWeb/ontimize-web-templates/blob/develop/templates/',
+  urlReadme:'/ontimize-web-templates/develop/templates/'
 };

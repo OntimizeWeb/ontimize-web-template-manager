@@ -9,13 +9,11 @@
         <h3>{{ templateDescription }}</h3>
       </div>
       <o-button attr="github-btn" type="flat" color="primary" class="github-btn" svg-icon="ontimize:github-btn{{dark}}"
-        label="Github Link"></o-button>
+        label="Github Link" (onClick)="openRepository()"></o-button>
     </div>
     <div class="right-container" fxLayout="column" fxLayoutAlign="flex-start">
       <o-gallery #gallery *ngIf="galleryImages.length>0" [gallery-images]="galleryImages" [gallery-options]="galleryOptions"></o-gallery>
-      <div *ngIf="detail" fxLayoutAlign="column" fxLayoutGap="40px">
-        <div [innerHTML]="templateBottomDescription" class="description"></div>
-      </div>
+      <markdown [src]="templateURLReadme" class="description"></markdown>
     </div>
   </div>
 </div>
