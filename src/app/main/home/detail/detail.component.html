@@ -3,7 +3,7 @@
     <o-button attr="back-btn" label="&#8592; Go back" (onClick)="openHome()"></o-button>
   </div>
   <div class="bottom-container" fxLayoutGap="40px" fxLayout="row" fxLayoutAlign="space-between">
-    <div class="left-container" fxLayout="column">
+    <div class="left-container" fxLayout="column" fxFlex="25">
       <div class="text">
         <h1>{{ templateTitle }}</h1>
         <h3>{{ templateDescription }}</h3>
@@ -11,7 +11,7 @@
       <o-button attr="github-btn" type="flat" color="primary" class="github-btn" svg-icon="ontimize:github-btn{{dark}}"
         label="Github Link" (onClick)="openRepository()"></o-button>
     </div>
-    <div class="right-container" fxLayout="column" fxLayoutAlign="flex-start">
+    <div class="right-container" fxLayout="column" fxLayoutAlign="flex-start" fxFlex="75">
       <o-gallery #gallery *ngIf="galleryImages.length>0" [gallery-images]="galleryImages" [gallery-options]="galleryOptions"></o-gallery>
       <markdown [src]="templateURLReadme" class="description"></markdown>
     </div>
