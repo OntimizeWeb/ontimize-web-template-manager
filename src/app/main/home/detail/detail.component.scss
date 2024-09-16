@@ -1,10 +1,10 @@
-.main-overflow {
+.main-overflow-detail {
   overflow: auto;
   height: calc(100vh - 80px);
   padding: 0 235px;
 
   .top-container {
-    padding: 40px 0 0;
+    padding: 40px 0 48px;
 
     .mdc-button {
       border-style: none;
