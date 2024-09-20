@@ -11,7 +11,7 @@
       <o-button attr="github-btn" type="flat" color="primary" class="github-btn" svg-icon="ontimize:github-btn{{dark}}"
         label="Github Link" (onClick)="openRepository()"></o-button>
     </div>
-    <div class="right-container" fxLayout="column" fxLayoutAlign="center" fxFlex="75" fxFlex.lt-lg>
+    <div class="right-container" fxLayout="column" fxLayoutAlign="center" fxFlex="calc(75% - 275px)" fxFlex.lt-lg>
       <o-gallery #gallery *ngIf="galleryImages.length>0" [gallery-images]="galleryImages" [gallery-options]="galleryOptions"></o-gallery>
       <markdown [src]="templateURLReadme" class="description"></markdown>
     </div>
