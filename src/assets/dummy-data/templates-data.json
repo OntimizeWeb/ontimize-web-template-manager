@@ -24,16 +24,16 @@
     },
     {
       "ID": 2,
-      "IMG": "login/login04/login04_thumbail_01.png",
+      "IMG": "login/login04/login04_thumbnail_01.png",
       "TITLE": "Geometric login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window.",
       "TYPE": 9,
       "IMAGES": [{
-          "small": "login/login04/login04_thumbail_01.png",
+          "small": "login/login04/login04_thumbnail_01.png",
           "big": "login/login04/login04_01.png"
         },
         {
-          "small": "login/login04/login04_02.png",
+          "small": "login/login04/login04_thumbnail_02.png",
           "big": "login/login04/login04_02.png"
         }
       ],
@@ -41,16 +41,16 @@
     },
     {
       "ID": 3,
-      "IMG": "login/login06/login06_thumbail_01.png",
+      "IMG": "login/login06/login06_thumbnail_01.png",
       "TITLE": "Abstract login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window. The predominant color is the blue.",
       "TYPE": 9,
       "IMAGES": [{
-          "small": "login/login06/login06_thumbail_01.png",
+          "small": "login/login06/login06_thumbnail_01.png",
           "big": "login/login06/login06_01.png"
         },
         {
-          "small": "login/login06/login06_02.png",
+          "small": "login/login06/login06_thumbnail_02.png",
           "big": "login/login06/login06_02.png"
         }
       ],
@@ -58,21 +58,21 @@
     },
     {
       "ID": 4,
-      "IMG": "login/login01/login01_thumbail_01.png",
+      "IMG": "login/login01/login01_thumbnail_01.png",
       "TITLE": "Right side login page",
       "DESCRIPTION": "This is the template of a login page with the login form aligned to the right side of the window. It have a remember me field and a forgot password and register page.",
       "TYPE": 9,
       "IMAGES": [
         {
-          "small": "login/login01/login01_thumbail_01.png",
+          "small": "login/login01/login01_thumbnail_01.png",
           "big": "login/login01/login01_01.png"
         },
         {
-          "small": "login/login01/login01_02.png",
+          "small": "login/login01/login01_thumbnail_02.png",
           "big": "login/login01/login01_02.png"
         },
         {
-          "small": "login/login01/login01_03.png",
+          "small": "login/login01/login01_thumbnail_03.png",
           "big": "login/login01/login01_03.png"
         }
       ],
@@ -80,41 +80,41 @@
     },
     {
       "ID": 5,
-      "IMG": "login/login03/login03_thumbail_01.png",
+      "IMG": "login/login03/login03_thumbnail_01.png",
       "TITLE": "Right side login page with language selector",
       "DESCRIPTION": "This is the template of a login page with the login form aligned to the right side of the window. It have a language selector field and a forgot password and register page.",
       "TYPE": 9,
       "IMAGES": [
         {
-          "small": "login/login03/login03_thumbail_01.png",
+          "small": "login/login03/login03_thumbnail_01.png",
           "big": "login/login03/login03_01.png"
         },
         {
-          "small": "login/login03/login03_02.png",
+          "small": "login/login03/login03_thumbnail_02.png",
           "big": "login/login03/login03_02.png"
         },
         {
-          "small": "login/login03/login03_03.png",
+          "small": "login/login03/login03_thumbnail_03.png",
           "big": "login/login03/login03_03.png"
         },
         {
-          "small": "login/login03/login03_04.png",
+          "small": "login/login03/login03_thumbnail_04.png",
           "big": "login/login03/login03_04.png"
         },
         {
-          "small": "login/login03/login03_05.png",
+          "small": "login/login03/login03_thumbnail_05.png",
           "big": "login/login03/login03_05.png"
         },
         {
-          "small": "login/login03/login03_06.png",
+          "small": "login/login03/login03_thumbnail_06.png",
           "big": "login/login03/login03_06.png"
         },
         {
-          "small": "login/login03/login03_07.png",
+          "small": "login/login03/login03_thumbnail_07.png",
           "big": "login/login03/login03_07.png"
         },
         {
-          "small": "login/login03/login03_08.png",
+          "small": "login/login03/login03_thumbnail_08.png",
           "big": "login/login03/login03_08.png"
         }
       ],
@@ -122,41 +122,41 @@
     },
     {
       "ID": 6,
-      "IMG": "login/login06/login06_thumbail_01.png",
+      "IMG": "login/login05/login05_thumbnail_01.png",
       "TITLE": "Centered abstract login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window. Also the template have a language selector and a register and forgot password pages. The predominant color is the blue.",
       "TYPE": 9,
       "IMAGES": [
         {
-          "small": "login/login05/login05_thumbail_01.png",
+          "small": "login/login05/login05_thumbnail_01.png",
           "big": "login/login05/login05_01.png"
         },
         {
-          "small": "login/login05/login05_02.png",
+          "small": "login/login05/login05_thumbnail_02.png",
           "big": "login/login05/login05_02.png"
         },
         {
-          "small": "login/login05/login05_03.png",
+          "small": "login/login05/login05_thumbnail_03.png",
           "big": "login/login05/login05_03.png"
         },
         {
-          "small": "login/login05/login05_04.png",
+          "small": "login/login05/login05_thumbnail_04.png",
           "big": "login/login05/login05_04.png"
         },
         {
-          "small": "login/login05/login05_05.png",
+          "small": "login/login05/login05_thumbnail_05.png",
           "big": "login/login05/login05_05.png"
         },
         {
-          "small": "login/login05/login05_06.png",
+          "small": "login/login05/login05_thumbnail_06.png",
           "big": "login/login05/login05_06.png"
         },
         {
-          "small": "login/login05/login05_07.png",
+          "small": "login/login05/login05_thumbnail_07.png",
           "big": "login/login05/login05_07.png"
         },
         {
-          "small": "login/login05/login05_08.png",
+          "small": "login/login05/login05_thumbnail_08.png",
           "big": "login/login05/login05_08.png"
         }
       ],
