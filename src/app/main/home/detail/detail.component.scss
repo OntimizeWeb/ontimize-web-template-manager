@@ -1,80 +1,87 @@
-.top-container {
-  padding: 40px 232px 0;
+.main-overflow-detail {
+  overflow: auto;
+  height: calc(100vh - 80px);
+  padding: 0 235px;
 
-  .mdc-button {
-    border-style: none;
-    font-size: 20px;
-  }
-}
+  .top-container {
+    padding: 40px 0 48px;
 
-.bottom-container {
-  padding: 40px 0 40px 232px;
-
-  .left-container {
-    overflow: hidden;
-
-    .text {
-      h1 {
-        font-size: 36px;
-        font-weight: 700;
-        margin-top: 0;
-      }
-
-      h3 {
-        font-size: 22px;
-        font-weight: 400;
-      }
+    .mdc-button {
+      border-style: none;
+      font-size: 20px;
     }
+  }
 
-    .github-btn {
-      width: 100%;
-      border-radius: 4px;
+  .bottom-container {
+    height: fit-content;
 
-      .mat-mdc-button-base {
-        height: 64px;
+    .left-container {
+      .text {
+        h1 {
+          font-size: 36px;
+          font-weight: 700;
+          margin-top: 0;
+        }
+
+        h3 {
+          font-size: 22px;
+          font-weight: 400;
+        }
+      }
+
+      .github-btn {
+        width: 100%;
         border-radius: 4px;
 
-        .mdc-button__label {
-          font-size: 24px;
-          padding-top: 4px;
+        .mat-mdc-button-base {
+          height: 64px;
+          border-radius: 4px;
 
-          .mat-icon {
-            width: 41px;
-            height: 41px;
-            margin-right: 12px;
-            margin-bottom: 4px;
+          .mdc-button__label {
+            font-size: 24px;
+            padding-top: 4px;
+            text-wrap: nowrap;
+
+            .mat-icon {
+              width: 41px;
+              height: 41px;
+              margin-right: 12px;
+              margin-bottom: 4px;
+            }
           }
         }
       }
     }
-  }
 
-  .right-container {
-    overflow: auto;
-    width: 100%;
-    height: calc(100vh - 192px);
-    padding-right: 232px;
+    .right-container {
+      width: 100%;
 
-    .description {
-      margin-top: 50px;
+      .description {
+        margin-top: 50px;
 
-      h1,
-      h2 {
-        &::before {
-          font-family: 'Material Icons',sans-serif;
-          content: "\e836";
-          font-size: 24px;
-          margin-right: 20px
+        h1,
+        h2 {
+          &::before {
+            font-family: 'Material Icons',sans-serif;
+            content: "\e836";
+            font-size: 24px;
+            margin-right: 20px;
+          }
+        }
+
+        > .ellipsis {
+          margin-right: 40px;
+        }
+
+        > p {
+          padding-left: 72px;
         }
       }
-
-      >.ellipsis {
-        margin-right: 40px;
-      }
-
-      >p {
-        padding-left: 72px;
-      }
     }
+  }
+}
+@media(max-width:1440px) {
+  .main-overflow-detail {
+    padding: 0 55px;
   }
 }
