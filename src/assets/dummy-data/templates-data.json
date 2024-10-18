@@ -161,6 +161,90 @@
         }
       ],
       "URLGITHUB": "login/05-login"
+    },
+    {
+      "ID": 7,
+      "IMG": "grid/grid01/grid01_thumbnail_01.png",
+      "TITLE": "Grid with top custom filter",
+      "DESCRIPTION": "This is the template of a grid example with a collapsible filter on the top.",
+      "TYPE": 2,
+      "IMAGES": [
+        {
+          "small": "grid/grid01/grid01_thumbnail_01.png",
+          "big": "grid/grid01/grid01_01.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_02.png",
+          "big": "grid/grid01/grid01_02.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_03.png",
+          "big": "grid/grid01/grid01_03.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_04.png",
+          "big": "grid/grid01/grid01_04.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_05.png",
+          "big": "grid/grid01/grid01_05.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_06.png",
+          "big": "grid/grid01/grid01_06.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_07.png",
+          "big": "grid/grid01/grid01_07.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_08.png",
+          "big": "grid/grid01/grid01_08.png"
+        }
+      ],
+      "URLGITHUB": "grid/01-grid"
+    },
+    {
+      "ID": 8,
+      "IMG": "list/list01/list01_thumbnail_01.png",
+      "TITLE": "List with side collapsible filter",
+      "DESCRIPTION": "This is the template of a list with a custom filter on the left side.",
+      "TYPE": 3,
+      "IMAGES": [
+        {
+          "small": "list/list01/list01_thumbnail_01.png",
+          "big": "list/list01/list01_01.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_02.png",
+          "big": "list/list01/list01_02.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_03.png",
+          "big": "list/list01/list01_03.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_04.png",
+          "big": "list/list01/list01_04.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_05.png",
+          "big": "list/list01/list01_05.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_06.png",
+          "big": "list/list01/list01_06.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_07.png",
+          "big": "list/list01/list01_07.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_08.png",
+          "big": "list/list01/list01_08.png"
+        }
+      ],
+      "URLGITHUB": "list/01-list"
     }
   ],
   "sqlTypes": {

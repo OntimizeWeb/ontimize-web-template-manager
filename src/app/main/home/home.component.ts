@@ -136,19 +136,33 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   filterChangesEvents() {
+    let markedChk;
+    let searchAct;
     this.checkbox.forEach(chk => {
       chk.onValueChange.subscribe(value => {
-        if (value.newValue == true) {
+        markedChk = false;
+        searchAct = false;
+        this.checkbox.forEach(chk => {
+          if (chk.getValue()) {
+            markedChk = true;
+          }
+        });
+        if (this.search.getValue() != '' && this.search.getValue() != null) {
+          searchAct = true;
+        }
+        if (value.newValue) {
           this.hideBtn = false;
-        } else {
+        } else if (!value.newValue && !markedChk && !searchAct) {
           this.hideBtn = true;
         }
       });
     });
     this.search.onSearch.subscribe(search => {
       if (search) {
+        searchAct = true;
         this.hideBtn = false;
-      } else {
+      } else if (!markedChk) {
+        searchAct = false;
         this.hideBtn = true;
       }
     });
