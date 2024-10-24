@@ -184,22 +184,6 @@
         {
           "small": "grid/grid01/grid01_thumbnail_04.png",
           "big": "grid/grid01/grid01_04.png"
-        },
-        {
-          "small": "grid/grid01/grid01_thumbnail_05.png",
-          "big": "grid/grid01/grid01_05.png"
-        },
-        {
-          "small": "grid/grid01/grid01_thumbnail_06.png",
-          "big": "grid/grid01/grid01_06.png"
-        },
-        {
-          "small": "grid/grid01/grid01_thumbnail_07.png",
-          "big": "grid/grid01/grid01_07.png"
-        },
-        {
-          "small": "grid/grid01/grid01_thumbnail_08.png",
-          "big": "grid/grid01/grid01_08.png"
         }
       ],
       "URLGITHUB": "grid/01-grid"
@@ -226,22 +210,6 @@
         {
           "small": "list/list01/list01_thumbnail_04.png",
           "big": "list/list01/list01_04.png"
-        },
-        {
-          "small": "list/list01/list01_thumbnail_05.png",
-          "big": "list/list01/list01_05.png"
-        },
-        {
-          "small": "list/list01/list01_thumbnail_06.png",
-          "big": "list/list01/list01_06.png"
-        },
-        {
-          "small": "list/list01/list01_thumbnail_07.png",
-          "big": "list/list01/list01_07.png"
-        },
-        {
-          "small": "list/list01/list01_thumbnail_08.png",
-          "big": "list/list01/list01_08.png"
         }
       ],
       "URLGITHUB": "list/01-list"
