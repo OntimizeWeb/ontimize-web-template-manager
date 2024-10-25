@@ -1,5 +1,4 @@
 @use '@angular/material'as mat;
-
 @mixin detail-theme($theme) {
   $primary: map-get($theme, color, primary);
   $background: map-get($theme, color, background);
@@ -13,7 +12,6 @@
   }
 
   .right-container {
-
     .ellipsis {
       float: left;
       width: 32px;
@@ -22,8 +20,17 @@
       margin-right: 10px;
       background-image: url('/assets/images/ellipse.svg');
     }
-
     @if $is-dark {
+      o-gallery-image {
+        box-shadow: 0 4px 4px 0 #00000040;
+        border: none;
+      }
+
+      .o-gallery-thumbnail {
+        box-shadow: 0 4px 4px 0 #00000040;
+        border: none;
+      }
+
       .ellipsis {
         float: left;
         width: 32px;
@@ -37,7 +44,7 @@
     .img-container {
       o-gallery-image {
         @if $is-dark {
-          box-shadow: 6.6px 8.26px 14.86px 0px #00000040;
+          box-shadow: 6.6px 8.26px 14.86px 0 #00000040;
         }
       }
     }
@@ -54,20 +61,16 @@
     }
   }
 
-
   .left-container {
-
     h1,
     h3 {
       color: mat.get-color-from-palette($foreground, text);
     }
 
     .github-btn {
-
       @if $is-dark {
         color: #000000DE;
       }
-
       @else {
         color: #FFFFFFDE;
       }
@@ -76,7 +79,6 @@
         @if $is-dark {
           fill: #000000DE;
         }
-
         @else {
           fill: #FFFFFFDE;
         }
