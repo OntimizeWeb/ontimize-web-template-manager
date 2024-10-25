@@ -5,82 +5,78 @@
   $foreground: map-get($theme, color, foreground);
   $is-dark: map-get($theme, color, is-dark);
 
-  .top-container {
-    button {
-      color: mat.get-color-from-palette($foreground, text);
-    }
-  }
-
-  .right-container {
-    .ellipsis {
-      float: left;
-      width: 32px;
-      height: 32px;
-      margin-top: 20px;
-      margin-right: 10px;
-      background-image: url('/assets/images/ellipse.svg');
-    }
-    @if $is-dark {
-      o-gallery-image {
-        box-shadow: 0 4px 4px 0 #00000040;
-        border: none;
-      }
-
-      .o-gallery-thumbnail {
-        box-shadow: 0 4px 4px 0 #00000040;
-        border: none;
-      }
-
-      .ellipsis {
-        float: left;
-        width: 32px;
-        height: 32px;
-        margin-top: 20px;
-        margin-right: 10px;
-        background-image: url('/assets/images/ellipse-dark.svg');
+  .main-overflow-detail {
+    .top-container {
+      button {
+        color: mat.get-color-from-palette($foreground, text);
       }
     }
 
-    .img-container {
-      o-gallery-image {
+    .bottom-container {
+      .right-container {
+        .ellipsis {
+          float: left;
+          width: 32px;
+          height: 32px;
+          margin-top: 20px;
+          margin-right: 10px;
+          background-image: url('/assets/images/ellipse.svg');
+        }
         @if $is-dark {
-          box-shadow: 6.6px 8.26px 14.86px 0 #00000040;
+          .ellipsis {
+            float: left;
+            width: 32px;
+            height: 32px;
+            margin-top: 20px;
+            margin-right: 10px;
+            background-image: url('/assets/images/ellipse-dark.svg');
+          }
+        }
+
+        o-gallery-image {
+          @if $is-dark {
+            box-shadow: 0 4px 4px 0 #00000040;
+          }
+        }
+
+        .o-gallery-thumbnail {
+          border: none;
+        }
+
+        .description {
+          color: mat.get-color-from-palette($foreground, text);
+
+          h1,
+          h2 {
+            &::before {
+              color: mat.get-color-from-palette($primary, 500);
+            }
+          }
         }
       }
-    }
 
-    .description {
-      color: mat.get-color-from-palette($foreground, text);
-
-      h1,
-      h2 {
-        &::before {
-          color: mat.get-color-from-palette($primary, 500);
+      .left-container {
+        h1,
+        h3 {
+          color: mat.get-color-from-palette($foreground, text);
         }
-      }
-    }
-  }
 
-  .left-container {
-    h1,
-    h3 {
-      color: mat.get-color-from-palette($foreground, text);
-    }
+        .github-btn {
+          @if $is-dark {
+            color: #000000DE;
+          }
+          @else {
+            color: #FFFFFFDE;
+          }
 
-    .github-btn {
-      @if $is-dark {
-        color: #000000DE;
-      }
-      @else {
-        color: #FFFFFFDE;
-      }
-
-      .mdc-button__label {
-        @if $is-dark {
-          fill: #000000DE;
-        }
-        @else {
-          fill: #FFFFFFDE;
+          .mdc-button__label {
+            @if $is-dark {
+              fill: #000000DE;
+            }
+            @else {
+              fill: #FFFFFFDE;
+            }
+          }
         }
       }
     }
