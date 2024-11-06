@@ -56,6 +56,22 @@
     .right-container {
       width: 100%;
 
+      o-gallery-image {
+        box-shadow: 0 4px 4px 0 #00000029;
+        margin-bottom: 14px;
+        border: 1px solid #00000029;
+        border-radius: 8px;
+
+        >div {
+          border-radius: 8px;
+        }
+      }
+
+      .o-gallery-thumbnail {
+        border: 1px solid #00000029;
+        border-radius: 8px;
+      }
+
       .description {
         margin-top: 50px;
 

@@ -28,8 +28,9 @@ export class DetailComponent implements OnInit {
   protected galleryOptions = [
     {
       width: '100%',
-      thumbnailsColumns: 3,
-      aspectRatio: "5:3"
+      thumbnailsColumns: 4,
+      aspectRatio: "5:3",
+      thumbnailMargin: 46
     }
   ];
   protected galleryImages: GalleryImage[];
