@@ -213,6 +213,32 @@
         }
       ],
       "URLGITHUB": "list/01-list"
+    },
+    {
+      "ID": 9,
+      "IMG": "table/table01/table01_thumbnail_01.png",
+      "TITLE": "Table with collapsible filter",
+      "DESCRIPTION": "This is the template of a table with a custom collapsible filter on the top.",
+      "TYPE": 1,
+      "IMAGES": [
+        {
+          "small": "table/table01/table01_thumbnail_01.png",
+          "big": "table/table01/table01_01.png"
+        },
+        {
+          "small": "table/table01/table01_thumbnail_02.png",
+          "big": "table/table01/table01_02.png"
+        },
+        {
+          "small": "table/table01/table01_thumbnail_03.png",
+          "big": "table/table01/table01_03.png"
+        },
+        {
+          "small": "table/table01/table01_thumbnail_04.png",
+          "big": "table/table01/table01_04.png"
+        }
+      ],
+      "URLGITHUB": "table/01-table"
     }
   ],
   "sqlTypes": {
