@@ -22,9 +22,10 @@
             <o-checkbox #checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
             <o-checkbox #checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
             <o-checkbox #checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_FORM" label="Form" read-only="no"></o-checkbox>
           </o-column-collapsible>
           <o-filter-builder #filterBuilder attr="thefilter"
-            filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN" [target]="grid"
+            filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN;CHK_FORM" [target]="grid"
             query-on-change="yes" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
         </div>
         <div class="content-container" fxLayout="column">
