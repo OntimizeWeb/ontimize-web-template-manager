@@ -254,6 +254,14 @@
             {
               "small": "form/form01/form01_thumbnail_02.png",
               "big": "form/form01/form01_02.png"
+            },
+            {
+              "small": "form/form01/form01_thumbnail_03.png",
+              "big": "form/form01/form01_03.png"
+            },
+            {
+              "small": "form/form01/form01_thumbnail_04.png",
+              "big": "form/form01/form01_04.png"
             }
           ],
           "URLGITHUB": "form/01-form"
