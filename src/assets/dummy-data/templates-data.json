@@ -242,7 +242,7 @@
     },
         {
           "ID": 10,
-          "IMG": "form/form01/form01_thumbnail_01.png",
+          "IMG": "form/form01/form01_thumbnail_02.png",
           "TITLE": "Form with collapsible div",
           "DESCRIPTION": "This is the template of a form with a custom collapsible div on the top.",
           "TYPE": 10,
