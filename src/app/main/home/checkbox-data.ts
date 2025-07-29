@@ -14,6 +14,10 @@ const data = [
   {
     'ATTR': 'CHK_TREES',
     'LABEL': 'Trees'
+  },
+  {
+    'ATTR': 'CHK_FORM',
+    'LABEL': 'Forms'
   }
 ]
 

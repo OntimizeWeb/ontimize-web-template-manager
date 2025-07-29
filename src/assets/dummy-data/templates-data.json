@@ -239,7 +239,33 @@
         }
       ],
       "URLGITHUB": "table/01-table"
-    }
+    },
+        {
+          "ID": 10,
+          "IMG": "form/form01/form01_thumbnail_02.png",
+          "TITLE": "Form with collapsible div",
+          "DESCRIPTION": "This is the template of a form with a custom collapsible div on the top.",
+          "TYPE": 10,
+          "IMAGES": [
+            {
+              "small": "form/form01/form01_thumbnail_01.png",
+              "big": "form/form01/form01_01.png"
+            },
+            {
+              "small": "form/form01/form01_thumbnail_02.png",
+              "big": "form/form01/form01_02.png"
+            },
+            {
+              "small": "form/form01/form01_thumbnail_03.png",
+              "big": "form/form01/form01_03.png"
+            },
+            {
+              "small": "form/form01/form01_thumbnail_04.png",
+              "big": "form/form01/form01_04.png"
+            }
+          ],
+          "URLGITHUB": "form/01-form"
+        }
   ],
   "sqlTypes": {
     "ID": 5,
