@@ -113,6 +113,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         else if (fil.attr == "CHK_FORM") {
           filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 10));
         }
+        else if (fil.attr == "CHK_DASHBOARD") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 11));
+        }
       }
     });
 
