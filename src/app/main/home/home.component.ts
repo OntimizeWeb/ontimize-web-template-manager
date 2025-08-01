@@ -119,11 +119,12 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
 
+    let ce: Expression;
     if (filters.length > 0) {
-      return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
-    } else {
-      return FilterExpressionUtils.buildExpressionIn("TYPE", Array.from({ length: 11 }, (_, i) => i + 1));
+      ce = filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
     }
+    return ce;
+
   }
 
   toogleSidenav() {
