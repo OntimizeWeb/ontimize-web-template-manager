@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     let ce: Expression;
     if (filters.length > 0) {
-      ce = filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
+      ce = filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR),0);
     }
     return ce;
 
