@@ -113,14 +113,18 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         else if (fil.attr == "CHK_FORM") {
           filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 10));
         }
+        else if (fil.attr == "CHK_DASHBOARD") {
+          filters.push(FilterExpressionUtils.buildExpressionEquals("TYPE", 11));
+        }
       }
     });
 
+    let ce: Expression;
     if (filters.length > 0) {
-      return filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR));
-    } else {
-      return FilterExpressionUtils.buildExpressionIn("TYPE", Array.from({ length: 10 }, (_, i) => i + 1));
+      ce = filters.reduce((exp1, exp2) => FilterExpressionUtils.buildComplexExpression(exp1, exp2, FilterExpressionUtils.OP_OR),0);
     }
+    return ce;
+
   }
 
   toogleSidenav() {

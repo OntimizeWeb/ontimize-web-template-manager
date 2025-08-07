@@ -18,6 +18,10 @@ const data = [
   {
     'ATTR': 'CHK_FORM',
     'LABEL': 'Forms'
+  },
+  {
+    'ATTR': 'CHK_DASHBOARD',
+    'LABEL': 'Dashboards'
   }
 ]
 

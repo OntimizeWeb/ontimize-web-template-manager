@@ -152,6 +152,10 @@ export class DummyService extends OntimizeEEService {
   }
 
   private filterResponse(kv: object, resp) {
+    if (!kv || Object.keys(kv).length == 0) {
+      return resp.data;
+    }
+
     if (kv.hasOwnProperty(FilterExpressionUtils.FILTER_EXPRESSION_KEY)) {
       return this.fetchRoots(resp);
     }

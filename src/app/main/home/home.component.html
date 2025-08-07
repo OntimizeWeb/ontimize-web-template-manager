@@ -23,15 +23,16 @@
             <o-checkbox #checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
             <o-checkbox #checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
             <o-checkbox #checkbox attr="CHK_FORM" label="Forms" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_DASHBOARD" label="Dashboards" read-only="no"></o-checkbox>
           </o-column-collapsible>
           <o-filter-builder #filterBuilder attr="thefilter"
-            filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN;CHK_FORM" [target]="grid"
+            filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN;CHK_FORM;CHK_DASHBOARD" [target]="grid"
             query-on-change="yes" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
         </div>
         <div class="content-container" fxLayout="column">
           <div fxLayout="row" layout-padding fxLayoutAlign="center center">
             <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service-type="DummyService" service="templates" entity="template" show-footer="no" refresh-button="no"
-              quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" fxFlex>
+              quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" query-rows="12" fxFlex>
               <o-grid-item *ngFor="let grd of grid.dataArray">
                 <div layout-padding class="container-item" layout-align="center">
                   <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">

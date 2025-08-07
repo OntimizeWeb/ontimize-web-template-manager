@@ -28,7 +28,8 @@
       "TITLE": "Geometric login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window.",
       "TYPE": 9,
-      "IMAGES": [{
+      "IMAGES": [
+        {
           "small": "login/login04/login04_thumbnail_01.png",
           "big": "login/login04/login04_01.png"
         },
@@ -45,7 +46,8 @@
       "TITLE": "Abstract login page",
       "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window. The predominant color is the blue.",
       "TYPE": 9,
-      "IMAGES": [{
+      "IMAGES": [
+        {
           "small": "login/login06/login06_thumbnail_01.png",
           "big": "login/login06/login06_01.png"
         },
@@ -240,32 +242,50 @@
       ],
       "URLGITHUB": "table/01-table"
     },
+    {
+      "ID": 10,
+      "IMG": "form/form01/form01_thumbnail_02.png",
+      "TITLE": "Form with collapsible div",
+      "DESCRIPTION": "This is the template of a form with a custom collapsible div on the top.",
+      "TYPE": 10,
+      "IMAGES": [
         {
-          "ID": 10,
-          "IMG": "form/form01/form01_thumbnail_02.png",
-          "TITLE": "Form with collapsible div",
-          "DESCRIPTION": "This is the template of a form with a custom collapsible div on the top.",
-          "TYPE": 10,
-          "IMAGES": [
-            {
-              "small": "form/form01/form01_thumbnail_01.png",
-              "big": "form/form01/form01_01.png"
-            },
-            {
-              "small": "form/form01/form01_thumbnail_02.png",
-              "big": "form/form01/form01_02.png"
-            },
-            {
-              "small": "form/form01/form01_thumbnail_03.png",
-              "big": "form/form01/form01_03.png"
-            },
-            {
-              "small": "form/form01/form01_thumbnail_04.png",
-              "big": "form/form01/form01_04.png"
-            }
-          ],
-          "URLGITHUB": "form/01-form"
+          "small": "form/form01/form01_thumbnail_01.png",
+          "big": "form/form01/form01_01.png"
+        },
+        {
+          "small": "form/form01/form01_thumbnail_02.png",
+          "big": "form/form01/form01_02.png"
+        },
+        {
+          "small": "form/form01/form01_thumbnail_03.png",
+          "big": "form/form01/form01_03.png"
+        },
+        {
+          "small": "form/form01/form01_thumbnail_04.png",
+          "big": "form/form01/form01_04.png"
         }
+      ],
+      "URLGITHUB": "form/01-form"
+    },
+    {
+      "ID": 11,
+      "IMG": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
+      "TITLE": "Dashboard with multiple charts",
+      "DESCRIPTION": "This is the template of a dashboard with a different examples of charts.",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
+          "big": "dashboard/dashboard01/dashboard01_01.png"
+        },
+        {
+          "small": "dashboard/dashboard01/dashboard01_thumbnail_02.png",
+          "big": "dashboard/dashboard01/dashboard01_02.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/01-dashboard"
+    }
   ],
   "sqlTypes": {
     "ID": 5,
