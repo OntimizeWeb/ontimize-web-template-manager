@@ -285,6 +285,24 @@
         }
       ],
       "URLGITHUB": "dashboard/01-dashboard"
+    },
+    {
+      "ID": 12,
+      "IMG": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
+      "TITLE": "Dashboard with different areas",
+      "DESCRIPTION": "This is the template of a dashboard with three different areas: card menu layout, mat-card and mat-expansion-panel.",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
+          "big": "dashboard/dashboard01/dashboard01_01.png"
+        },
+        {
+          "small": "dashboard/dashboard01/dashboard01_thumbnail_02.png",
+          "big": "dashboard/dashboard01/dashboard01_02.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/02-dashboard"
     }
   ],
   "sqlTypes": {
