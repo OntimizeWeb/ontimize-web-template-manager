@@ -300,6 +300,14 @@
         {
           "small": "dashboard/dashboard02/dashboard02_thumbnail_02.png",
           "big": "dashboard/dashboard02/dashboard02_02.png"
+        },
+        {
+          "small": "dashboard/dashboard02/dashboard02_thumbnail_03.png",
+          "big": "dashboard/dashboard02/dashboard02_03.png"
+        },
+        {
+          "small": "dashboard/dashboard02/dashboard02_thumbnail_04.png",
+          "big": "dashboard/dashboard02/dashboard02_04.png"
         }
       ],
       "URLGITHUB": "dashboard/02-dashboard"
