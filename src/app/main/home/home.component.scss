@@ -104,6 +104,10 @@
         .o-grid {
           width: 100%;
 
+          .o-grid-container {
+            padding: 8px;
+          }
+
           .mat-grid-tile {
             background-color: white;
             max-width: 350px;
