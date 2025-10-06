@@ -244,7 +244,7 @@
     },
     {
       "ID": 10,
-      "IMG": "table/table02/table02_thumbnail_02.png",
+      "IMG": "table/table02/table02_thumbnail_01.png",
       "TITLE": "Table with card filters",
       "DESCRIPTION": "This is the template of a table with multiple card filters and a collapsible filter on the top of the table.",
       "TYPE": 1,
