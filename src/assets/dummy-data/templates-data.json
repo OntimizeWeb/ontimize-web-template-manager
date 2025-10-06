@@ -244,6 +244,32 @@
     },
     {
       "ID": 10,
+      "IMG": "table/table02/table02_thumbnail_01.png",
+      "TITLE": "Table with card filters",
+      "DESCRIPTION": "This is the template of a table with multiple card filters and a collapsible filter on the top of the table.",
+      "TYPE": 1,
+      "IMAGES": [
+        {
+          "small": "table/table02/table02_thumbnail_01.png",
+          "big": "table/table02/table02_01.png"
+        },
+        {
+          "small": "table/table02/table02_thumbnail_02.png",
+          "big": "table/table02/table02_02.png"
+        },
+        {
+          "small": "table/table02/table02_thumbnail_03.png",
+          "big": "table/table02/table02_03.png"
+        },
+        {
+          "small": "table/table02/table02_thumbnail_04.png",
+          "big": "table/table02/table02_04.png"
+        }
+      ],
+      "URLGITHUB": "table/02-table"
+    },
+    {
+      "ID": 11,
       "IMG": "form/form01/form01_thumbnail_02.png",
       "TITLE": "Form with collapsible div",
       "DESCRIPTION": "This is the template of a form with a custom collapsible div on the top.",
@@ -269,7 +295,7 @@
       "URLGITHUB": "form/01-form"
     },
     {
-      "ID": 11,
+      "ID": 12,
       "IMG": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
       "TITLE": "Dashboard with multiple charts",
       "DESCRIPTION": "This is the template of a dashboard with a different examples of charts.",
@@ -287,7 +313,7 @@
       "URLGITHUB": "dashboard/01-dashboard"
     },
     {
-      "ID": 12,
+      "ID": 13,
       "IMG": "dashboard/dashboard02/dashboard02_thumbnail_02.png",
       "TITLE": "Dashboard with different areas",
       "DESCRIPTION": "This is the template of a dashboard with three different areas: card menu layout, mat-card and mat-expansion-panel.",
@@ -313,7 +339,7 @@
       "URLGITHUB": "dashboard/02-dashboard"
     },
     {
-      "ID": 13,
+      "ID": 14,
       "IMG": "dashboard/dashboard03/dashboard03_thumbnail_01.png",
       "TITLE": "Dashboard with different cards",
       "DESCRIPTION": "This is the template of a dashboard with different cards",
