@@ -355,6 +355,48 @@
         }
       ],
       "URLGITHUB": "dashboard/03-dashboard"
+    },
+    {
+      "ID": 15,
+      "IMG": "dashboard/dashboard04/dashboard04_thumbnail_01.png",
+      "TITLE": "Dashboard with multiple examples of charts and combo filters",
+      "DESCRIPTION": "This is the template of a dashboard with combo filters at the top and with them could filter data which is represented on the different charts",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_01.png",
+          "big": "dashboard/dashboard04/dashboard04_01.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_02.png",
+          "big": "dashboard/dashboard04/dashboard04_02.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_03.png",
+          "big": "dashboard/dashboard04/dashboard04_03.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_04.png",
+          "big": "dashboard/dashboard04/dashboard04_04.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_05.png",
+          "big": "dashboard/dashboard04/dashboard04_05.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_06.png",
+          "big": "dashboard/dashboard04/dashboard04_06.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_07.png",
+          "big": "dashboard/dashboard04/dashboard04_07.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_08.png",
+          "big": "dashboard/dashboard04/dashboard04_08.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/04-dashboard"
     }
   ],
   "sqlTypes": {
