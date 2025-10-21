@@ -204,14 +204,6 @@
         {
           "small": "grid/grid02/grid02_thumbnail_02.png",
           "big": "grid/grid02/grid02_02.png"
-        },
-        {
-          "small": "grid/grid02/grid02_thumbnail_03.png",
-          "big": "grid/grid02/grid02_03.png"
-        },
-        {
-          "small": "grid/grid02/grid02_thumbnail_04.png",
-          "big": "grid/grid02/grid02_04.png"
         }
       ],
       "URLGITHUB": "grid/02-grid"
