@@ -1,0 +1,52 @@
+<o-form #form service="templates" service-type="DummyService" editable-detail="no" show-header="no" query-on-init="no" class="fill-form">
+  <div class="main-overflow">
+    <div class="main-margin" fxLayout="column">
+      <div class="title-container">
+        <h1>FIND YOUR TEMPLATE</h1>
+        <h2>Begin the developing process with Ontimize prebuilding solutions and our library.</h2>
+      </div>
+      <div class="home-container" fxLayout="row">
+        <div fxLayout="column" fxLayoutGap="18px" class="filters">
+          <div fxLayout="row" class="top-filter" fxLayoutAlign="space-between flex-start">
+            <p>Filter templates</p>
+            <div fxLayoutAlign="center center" (click)="clearSelection()" class="clear-btn" [ngClass]="{'hide-btn' : hideBtn}">
+              <span class="material-symbols-outlined">
+                cancel
+              </span>
+              <span>&nbsp;Clear&nbsp;</span>
+            </div>
+          </div>
+          <o-search-input #search columns="TITLE;DESCRIPTION" placeholder="Search" show-menu="no" class="search-filter"></o-search-input>
+          <o-column-collapsible attr="filter_templates" title="Use Case" class="collapsible">
+            <o-checkbox #checkbox attr="CHK_TABLES" label="Tables" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_GRIDS" label="Grids" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_LISTS" label="Lists" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_LOGIN" label="Login" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_FORM" label="Forms" read-only="no"></o-checkbox>
+            <o-checkbox #checkbox attr="CHK_DASHBOARD" label="Dashboards" read-only="no"></o-checkbox>
+          </o-column-collapsible>
+          <o-filter-builder #filterBuilder attr="thefilter"
+            filters="CHK_ALL;CHK_TABLES;CHK_GRIDS;CHK_LISTS;CHK_TREES;CHK_TAB;CHK_DIALOG;CHK_SPLIT_PANE;CHK_CONTAINERS;CHK_LOGIN;CHK_FORM;CHK_DASHBOARD" [target]="grid"
+            query-on-change="yes" query-on-change-delay="500" [expression-builder]="createFilter"></o-filter-builder>
+        </div>
+        <div class="content-container" fxLayout="column">
+          <div fxLayout="row" layout-padding fxLayoutAlign="center center">
+            <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service-type="DummyService" service="templates" entity="template" show-footer="no" refresh-button="no"
+              quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" query-rows="15" fxFlex>
+              <o-grid-item *ngFor="let grd of grid.dataArray">
+                <div layout-padding class="container-item" layout-align="center">
+                  <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">
+                  <h4> {{grd.TITLE}} </h4>
+                  <h5 [matTooltip]="grd.DESCRIPTION"> {{grd.DESCRIPTION}} </h5>
+                  <span class="material-symbols-outlined open-icon">
+                    open_in_new
+                  </span>
+                </div>
+              </o-grid-item>
+            </o-grid>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</o-form>

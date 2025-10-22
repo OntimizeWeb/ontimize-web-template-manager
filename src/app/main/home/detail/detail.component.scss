@@ -1,0 +1,98 @@
+.main-overflow-detail {
+  overflow: auto;
+  height: calc(100vh - 80px);
+  padding: 0 7%;
+
+  .top-container {
+    padding: 40px 0 48px;
+
+    .mdc-button {
+      border-style: none;
+      font-size: 20px;
+    }
+  }
+
+  .bottom-container {
+    height: fit-content;
+
+    .left-container {
+      .text {
+        h1 {
+          font-size: 36px;
+          font-weight: 700;
+          margin-top: 0;
+        }
+
+        h3 {
+          font-size: 22px;
+          font-weight: 400;
+        }
+      }
+
+      .github-btn {
+        width: 100%;
+        border-radius: 4px;
+
+        .mat-mdc-button-base {
+          height: 64px;
+          border-radius: 4px;
+
+          .mdc-button__label {
+            font-size: 24px;
+            padding-top: 4px;
+            text-wrap: nowrap;
+
+            .mat-icon {
+              width: 41px;
+              height: 41px;
+              margin-right: 12px;
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .right-container {
+      width: 100%;
+
+      o-gallery-image {
+        box-shadow: 0 4px 4px 0 #00000029;
+        margin-bottom: 14px;
+        border: 1px solid #00000029;
+        border-radius: 8px;
+
+        >div {
+          border-radius: 8px;
+        }
+      }
+
+      .o-gallery-thumbnail {
+        border: 1px solid #00000029;
+        border-radius: 8px;
+      }
+
+      .description {
+        margin-top: 50px;
+
+        h1,
+        h2 {
+          &::before {
+            font-family: 'Material Icons',sans-serif;
+            content: "\e836";
+            font-size: 24px;
+            margin-right: 20px;
+          }
+        }
+
+        > .ellipsis {
+          margin-right: 40px;
+        }
+
+        > p {
+          padding-left: 72px;
+        }
+      }
+    }
+  }
+}

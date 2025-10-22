@@ -1,0 +1,32 @@
+.o-column-collapsible>.o-container.mat-expansion-panel .mat-expansion-panel-header .mat-expansion-panel-header-title span {
+  font-weight: 700;
+}
+
+.search-filter.o-search-input {
+
+  .quickFilter {
+    height: 40px;
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    border-radius: 3px;
+  }
+
+  .mat-mdc-form-field-flex {
+    padding-left: 0 !important;
+    height: 40px !important;
+
+    .mat-mdc-form-field-icon-prefix {
+      padding-left: 6px;
+    }
+  }
+}
+
+body {
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}

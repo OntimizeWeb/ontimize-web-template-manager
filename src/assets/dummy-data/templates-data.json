@@ -1,0 +1,452 @@
+{
+  "code": 0,
+  "message": "",
+  "totalQueryRecordsNumber": 69,
+  "startRecordIndex": 0,
+  "data": [
+    {
+      "ID": 1,
+      "IMG": "login/login02/login02_thumbnail_01.png",
+      "TITLE": "Simple login page",
+      "DESCRIPTION": "This is the template of a login page for your Ontimize applications.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login02/login02_thumbnail_01.png",
+          "big": "login/login02/login02_01.png"
+        },
+        {
+          "small": "login/login02/login02_thumbnail_02.png",
+          "big": "login/login02/login02_02.png"
+        }
+      ],
+      "URLGITHUB": "login/02-login"
+    },
+    {
+      "ID": 2,
+      "IMG": "login/login04/login04_thumbnail_01.png",
+      "TITLE": "Geometric login page",
+      "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login04/login04_thumbnail_01.png",
+          "big": "login/login04/login04_01.png"
+        },
+        {
+          "small": "login/login04/login04_thumbnail_02.png",
+          "big": "login/login04/login04_02.png"
+        }
+      ],
+      "URLGITHUB": "login/04-login"
+    },
+    {
+      "ID": 3,
+      "IMG": "login/login06/login06_thumbnail_01.png",
+      "TITLE": "Abstract login page",
+      "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window. The predominant color is the blue.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login06/login06_thumbnail_01.png",
+          "big": "login/login06/login06_01.png"
+        },
+        {
+          "small": "login/login06/login06_thumbnail_02.png",
+          "big": "login/login06/login06_02.png"
+        }
+      ],
+      "URLGITHUB": "login/06-login"
+    },
+    {
+      "ID": 4,
+      "IMG": "login/login01/login01_thumbnail_01.png",
+      "TITLE": "Right side login page",
+      "DESCRIPTION": "This is the template of a login page with the login form aligned to the right side of the window. It have a remember me field and a forgot password and register page.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login01/login01_thumbnail_01.png",
+          "big": "login/login01/login01_01.png"
+        },
+        {
+          "small": "login/login01/login01_thumbnail_02.png",
+          "big": "login/login01/login01_02.png"
+        },
+        {
+          "small": "login/login01/login01_thumbnail_03.png",
+          "big": "login/login01/login01_03.png"
+        }
+      ],
+      "URLGITHUB": "login/01-login"
+    },
+    {
+      "ID": 5,
+      "IMG": "login/login03/login03_thumbnail_01.png",
+      "TITLE": "Right side login page with language selector",
+      "DESCRIPTION": "This is the template of a login page with the login form aligned to the right side of the window. It have a language selector field and a forgot password and register page.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login03/login03_thumbnail_01.png",
+          "big": "login/login03/login03_01.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_02.png",
+          "big": "login/login03/login03_02.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_03.png",
+          "big": "login/login03/login03_03.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_04.png",
+          "big": "login/login03/login03_04.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_05.png",
+          "big": "login/login03/login03_05.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_06.png",
+          "big": "login/login03/login03_06.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_07.png",
+          "big": "login/login03/login03_07.png"
+        },
+        {
+          "small": "login/login03/login03_thumbnail_08.png",
+          "big": "login/login03/login03_08.png"
+        }
+      ],
+      "URLGITHUB": "login/03-login"
+    },
+    {
+      "ID": 6,
+      "IMG": "login/login05/login05_thumbnail_01.png",
+      "TITLE": "Centered abstract login page",
+      "DESCRIPTION": "This is the template of a login page with language selector and the login form centred on the window. Also the template have a language selector and a register and forgot password pages. The predominant color is the blue.",
+      "TYPE": 9,
+      "IMAGES": [
+        {
+          "small": "login/login05/login05_thumbnail_01.png",
+          "big": "login/login05/login05_01.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_02.png",
+          "big": "login/login05/login05_02.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_03.png",
+          "big": "login/login05/login05_03.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_04.png",
+          "big": "login/login05/login05_04.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_05.png",
+          "big": "login/login05/login05_05.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_06.png",
+          "big": "login/login05/login05_06.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_07.png",
+          "big": "login/login05/login05_07.png"
+        },
+        {
+          "small": "login/login05/login05_thumbnail_08.png",
+          "big": "login/login05/login05_08.png"
+        }
+      ],
+      "URLGITHUB": "login/05-login"
+    },
+    {
+      "ID": 7,
+      "IMG": "grid/grid01/grid01_thumbnail_01.png",
+      "TITLE": "Grid with top custom filter",
+      "DESCRIPTION": "This is the template of a grid example with a collapsible filter on the top.",
+      "TYPE": 2,
+      "IMAGES": [
+        {
+          "small": "grid/grid01/grid01_thumbnail_01.png",
+          "big": "grid/grid01/grid01_01.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_02.png",
+          "big": "grid/grid01/grid01_02.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_03.png",
+          "big": "grid/grid01/grid01_03.png"
+        },
+        {
+          "small": "grid/grid01/grid01_thumbnail_04.png",
+          "big": "grid/grid01/grid01_04.png"
+        }
+      ],
+      "URLGITHUB": "grid/01-grid"
+    },
+    {
+      "ID": 8,
+      "IMG": "grid/grid02/grid02_thumbnail_01.png",
+      "TITLE": "Grid with top custom filter",
+      "DESCRIPTION": "This is the template of a grid example with a filter on the top.",
+      "TYPE": 2,
+      "IMAGES": [
+        {
+          "small": "grid/grid02/grid02_thumbnail_01.png",
+          "big": "grid/grid02/grid02_01.png"
+        },
+        {
+          "small": "grid/grid02/grid02_thumbnail_02.png",
+          "big": "grid/grid02/grid02_02.png"
+        }
+      ],
+      "URLGITHUB": "grid/02-grid"
+    },
+    {
+      "ID": 9,
+      "IMG": "list/list01/list01_thumbnail_01.png",
+      "TITLE": "List with side collapsible filter",
+      "DESCRIPTION": "This is the template of a list with a custom filter on the left side.",
+      "TYPE": 3,
+      "IMAGES": [
+        {
+          "small": "list/list01/list01_thumbnail_01.png",
+          "big": "list/list01/list01_01.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_02.png",
+          "big": "list/list01/list01_02.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_03.png",
+          "big": "list/list01/list01_03.png"
+        },
+        {
+          "small": "list/list01/list01_thumbnail_04.png",
+          "big": "list/list01/list01_04.png"
+        }
+      ],
+      "URLGITHUB": "list/01-list"
+    },
+    {
+      "ID": 10,
+      "IMG": "table/table01/table01_thumbnail_01.png",
+      "TITLE": "Table with collapsible filter",
+      "DESCRIPTION": "This is the template of a table with a custom collapsible filter on the top.",
+      "TYPE": 1,
+      "IMAGES": [
+        {
+          "small": "table/table01/table01_thumbnail_01.png",
+          "big": "table/table01/table01_01.png"
+        },
+        {
+          "small": "table/table01/table01_thumbnail_02.png",
+          "big": "table/table01/table01_02.png"
+        },
+        {
+          "small": "table/table01/table01_thumbnail_03.png",
+          "big": "table/table01/table01_03.png"
+        },
+        {
+          "small": "table/table01/table01_thumbnail_04.png",
+          "big": "table/table01/table01_04.png"
+        }
+      ],
+      "URLGITHUB": "table/01-table"
+    },
+    {
+      "ID": 11,
+      "IMG": "table/table02/table02_thumbnail_01.png",
+      "TITLE": "Table with card filters",
+      "DESCRIPTION": "This is the template of a table with multiple card filters and a collapsible filter on the top of the table.",
+      "TYPE": 1,
+      "IMAGES": [
+        {
+          "small": "table/table02/table02_thumbnail_01.png",
+          "big": "table/table02/table02_01.png"
+        },
+        {
+          "small": "table/table02/table02_thumbnail_02.png",
+          "big": "table/table02/table02_02.png"
+        },
+        {
+          "small": "table/table02/table02_thumbnail_03.png",
+          "big": "table/table02/table02_03.png"
+        },
+        {
+          "small": "table/table02/table02_thumbnail_04.png",
+          "big": "table/table02/table02_04.png"
+        }
+      ],
+      "URLGITHUB": "table/02-table"
+    },
+    {
+      "ID": 12,
+      "IMG": "form/form01/form01_thumbnail_02.png",
+      "TITLE": "Form with collapsible div",
+      "DESCRIPTION": "This is the template of a form with a custom collapsible div on the top.",
+      "TYPE": 10,
+      "IMAGES": [
+        {
+          "small": "form/form01/form01_thumbnail_01.png",
+          "big": "form/form01/form01_01.png"
+        },
+        {
+          "small": "form/form01/form01_thumbnail_02.png",
+          "big": "form/form01/form01_02.png"
+        },
+        {
+          "small": "form/form01/form01_thumbnail_03.png",
+          "big": "form/form01/form01_03.png"
+        },
+        {
+          "small": "form/form01/form01_thumbnail_04.png",
+          "big": "form/form01/form01_04.png"
+        }
+      ],
+      "URLGITHUB": "form/01-form"
+    },
+    {
+      "ID": 13,
+      "IMG": "form/form02/form02_thumbnail_01.png",
+      "TITLE": "Form with filtered grid",
+      "DESCRIPTION": "This is the template of a form with a filtered grid on the bottom using a custom service.",
+      "TYPE": 10,
+      "IMAGES": [
+        {
+          "small": "form/form02/form02_thumbnail_01.png",
+          "big": "form/form02/form02_01.png"
+        },
+        {
+          "small": "form/form02/form02_thumbnail_02.png",
+          "big": "form/form02/form02_02.png"
+        },
+        {
+          "small": "form/form02/form02_thumbnail_03.png",
+          "big": "form/form02/form02_03.png"
+        },
+        {
+          "small": "form/form02/form02_thumbnail_04.png",
+          "big": "form/form02/form02_04.png"
+        }
+      ],
+      "URLGITHUB": "form/02-form"
+    },
+    {
+      "ID": 14,
+      "IMG": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
+      "TITLE": "Dashboard with multiple charts",
+      "DESCRIPTION": "This is the template of a dashboard with a different examples of charts.",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard01/dashboard01_thumbnail_01.png",
+          "big": "dashboard/dashboard01/dashboard01_01.png"
+        },
+        {
+          "small": "dashboard/dashboard01/dashboard01_thumbnail_02.png",
+          "big": "dashboard/dashboard01/dashboard01_02.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/01-dashboard"
+    },
+    {
+      "ID": 15,
+      "IMG": "dashboard/dashboard02/dashboard02_thumbnail_02.png",
+      "TITLE": "Dashboard with different areas",
+      "DESCRIPTION": "This is the template of a dashboard with three different areas: card menu layout, mat-card and mat-expansion-panel.",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard02/dashboard02_thumbnail_01.png",
+          "big": "dashboard/dashboard02/dashboard02_01.png"
+        },
+        {
+          "small": "dashboard/dashboard02/dashboard02_thumbnail_02.png",
+          "big": "dashboard/dashboard02/dashboard02_02.png"
+        },
+        {
+          "small": "dashboard/dashboard02/dashboard02_thumbnail_03.png",
+          "big": "dashboard/dashboard02/dashboard02_03.png"
+        },
+        {
+          "small": "dashboard/dashboard02/dashboard02_thumbnail_04.png",
+          "big": "dashboard/dashboard02/dashboard02_04.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/02-dashboard"
+    },
+    {
+      "ID": 16,
+      "IMG": "dashboard/dashboard03/dashboard03_thumbnail_01.png",
+      "TITLE": "Dashboard with different cards",
+      "DESCRIPTION": "This is the template of a dashboard with different cards",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard03/dashboard03_thumbnail_01.png",
+          "big": "dashboard/dashboard03/dashboard03_01.png"
+        },
+        {
+          "small": "dashboard/dashboard03/dashboard03_thumbnail_02.png",
+          "big": "dashboard/dashboard03/dashboard03_02.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/03-dashboard"
+    },
+    {
+      "ID": 17,
+      "IMG": "dashboard/dashboard04/dashboard04_thumbnail_01.png",
+      "TITLE": "Dashboard with multiple examples of charts and combo filters",
+      "DESCRIPTION": "This is the template of a dashboard with combo filters at the top and with them could filter data which is represented on the different charts",
+      "TYPE": 11,
+      "IMAGES": [
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_01.png",
+          "big": "dashboard/dashboard04/dashboard04_01.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_02.png",
+          "big": "dashboard/dashboard04/dashboard04_02.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_03.png",
+          "big": "dashboard/dashboard04/dashboard04_03.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_04.png",
+          "big": "dashboard/dashboard04/dashboard04_04.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_05.png",
+          "big": "dashboard/dashboard04/dashboard04_05.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_06.png",
+          "big": "dashboard/dashboard04/dashboard04_06.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_07.png",
+          "big": "dashboard/dashboard04/dashboard04_07.png"
+        },
+        {
+          "small": "dashboard/dashboard04/dashboard04_thumbnail_08.png",
+          "big": "dashboard/dashboard04/dashboard04_08.png"
+        }
+      ],
+      "URLGITHUB": "dashboard/04-dashboard"
+    }
+  ],
+  "sqlTypes": {
+    "ID": 5,
+    "IMG": 12,
+    "DESCRIPTION": 12,
+    "TYPE": 5
+  }
+}
