@@ -1,7 +1,7 @@
 .main-overflow-detail {
   overflow: auto;
   height: calc(100vh - 80px);
-  padding: 0 235px;
+  padding: 0 10%;
 
   .top-container {
     padding: 40px 0 48px;
@@ -94,10 +94,5 @@
         }
       }
     }
-  }
-}
-@media(max-width:1440px) {
-  .main-overflow-detail {
-    padding: 0 55px;
   }
 }
