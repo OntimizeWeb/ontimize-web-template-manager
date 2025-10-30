@@ -32,7 +32,7 @@
         <div class="content-container" fxLayout="column">
           <div fxLayout="row" layout-padding fxLayoutAlign="center center">
             <o-grid #grid columns="ID;IMG;TITLE;DESCRIPTION;TYPE" keys="ID" service-type="DummyService" service="templates" entity="template" show-footer="no" refresh-button="no"
-              quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" query-rows="15" fxFlex>
+              quick-filter="no" grid-item-height="300px" gutter-size="44px" [controls]="false" [cols]="columns" query-rows="25" fxFlex>
               <o-grid-item *ngFor="let grd of grid.dataArray">
                 <div layout-padding class="container-item" layout-align="center">
                   <img [src]="getImgUrl(grd.IMG)" alt="template-img" height="160px">
